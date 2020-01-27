@@ -24,11 +24,11 @@ import routes from "./routes/routes";
 import { baseUrl } from "@/config";
 
 if (baseUrl === "localhost") {
-  require("@/assets/scss/localhost.scss");
+  require("@/assets/scss/innogy.scss");
 } else if (baseUrl === "innogy") {
   require("@/assets/scss/innogy.scss");
 } else if (baseUrl === "marke") {
-  require("@/assets/scss/enviam.scss");
+  require("@/assets/scss/marke.scss");
 } else if (baseUrl === "enviam") {
   require("@/assets/scss/enviam.scss");
 }
