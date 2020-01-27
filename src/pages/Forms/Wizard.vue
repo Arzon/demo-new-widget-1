@@ -56,6 +56,7 @@ import FourthStep from "./Wizard/FourthStep.vue";
 
 import Swal from "sweetalert2";
 import { SimpleWizard, WizardTab } from "@/components";
+import { logo, baseUrl } from "@/config";
 
 export default {
   name: "registration-wizard",
@@ -75,8 +76,13 @@ export default {
   props: {
     logo: {
       type: String,
-      default: require("@/assets/img/innogy.svg")
+      default: logo[baseUrl]
     }
+  },
+  created(){
+    // const styleEl = document.createElement("style");
+    // styleEl.innerHTML = "@import '"+ baseUrl +".css'";
+    // document.head.appendChild(styleEl);
   },
   methods: {
     validateStep(ref) {

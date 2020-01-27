@@ -21,7 +21,17 @@ import Chartist from "chartist";
 
 // router setup
 import routes from "./routes/routes";
+import { baseUrl } from "@/config";
 
+if (baseUrl === "localhost") {
+  require("@/assets/scss/localhost.scss");
+} else if (baseUrl === "innogy") {
+  require("@/assets/scss/innogy.scss");
+} else if (baseUrl === "marke") {
+  require("@/assets/scss/enviam.scss");
+} else if (baseUrl === "enviam") {
+  require("@/assets/scss/enviam.scss");
+}
 // plugin setup
 Vue.use(VueRouter);
 Vue.use(DashboardPlugin);

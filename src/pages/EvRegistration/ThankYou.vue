@@ -18,6 +18,7 @@
 <script>
 import { SignupCard } from "@/components";
 import lang from "@/assets/lang/de.json";
+import { logo } from "@/config";
 export default {
   components: {
     // SignupCard
@@ -29,7 +30,7 @@ export default {
     },
     logo: {
       type: String,
-      default: require("@/assets/img/innogy.svg")
+      default: logo[window.location.host.substr(0, window.location.host.indexOf(':')).replace("-","") ]
     }
   },
   data() {

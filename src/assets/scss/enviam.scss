@@ -42,9 +42,6 @@
     .md-checkbox .md-checkbox-container:before{
         height: 27px;
     }
-    // .md-card .md-card-tabs .md-theme-default{
-    //     height: 145px;
-    // }
     @media only screen 
     and (max-width : 412px){
         .md-checkbox .md-checkbox-label{
@@ -62,12 +59,10 @@
             }
         }
     }
-    // .innogy.greentrax.de{
+    .moving-tab, .md-button.md-success, .md-button.md-success:hover, .md-button.md-success:focus, .md-button.md-success:active, .md-button.md-success.active, .md-button.md-success:active:focus, .md-button.md-success:active:hover, .md-button.md-success.active:focus, .md-button.md-success.active:hover, .open > .md-button.md-success.dropdown-toggle, .open > .md-button.md-success.dropdown-toggle:focus, .open > .md-button.md-success.dropdown-toggle:hover{
+        background-color: #143C8C !important;
+    }
 
-    // }
-    // .mark-e.greentrax.de{
-
-    // }
 }
 .thankyou {
    background-color: #ffffff; 

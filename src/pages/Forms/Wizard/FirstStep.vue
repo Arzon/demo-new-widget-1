@@ -43,9 +43,6 @@ export default {
       default: require("@/assets/img/banner.png")
     }
   },
-  created() {
-    console.log(lang);
-  },
   data() {
     return {
       field_name: {
