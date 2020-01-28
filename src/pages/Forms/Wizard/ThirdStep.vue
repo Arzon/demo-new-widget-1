@@ -105,12 +105,12 @@ export default {
       },
       third_step: {
         step: "third_step",
-        ownership_first_name: null,
-        ownership_last_name: null,
-        ownership_company: null,
-        ownership_vehicle_number: null,
-        contract_start: null,
-        contract_end: null
+        ownership_first_name: "",
+        ownership_last_name: "",
+        ownership_company: "",
+        ownership_vehicle_number: "",
+        contract_start: "",
+        contract_end: ""
       }
     };
   },
@@ -123,24 +123,24 @@ export default {
         let checkTabDepency = false;
 
         if (
-          this.third_step.ownership_first_name !== null &&
-          this.third_step.ownership_last_name !== null &&
-          this.third_step.ownership_company === null
+          this.third_step.ownership_first_name !== "" &&
+          this.third_step.ownership_last_name !== "" &&
+          this.third_step.ownership_company === ""
         ) {
           checkTabDepency = true;
         } else if (
-          this.third_step.ownership_first_name === null &&
-          this.third_step.ownership_last_name === null &&
-          this.third_step.ownership_company !== null
+          this.third_step.ownership_first_name === "" &&
+          this.third_step.ownership_last_name === "" &&
+          this.third_step.ownership_company !== ""
         ) {
           checkTabDepency = true;
         }
 
         if (
           !checkTabDepency ||
-          this.third_step.ownership_vehicle_number === null ||
-          this.third_step.contract_start === null ||
-          this.third_step.contract_end === null
+          this.third_step.ownership_vehicle_number === "" ||
+          this.third_step.contract_start === "" ||
+          this.third_step.contract_end === ""
         ) {
           document.querySelector(".errorThird").style.display = "block";
         } else {
@@ -155,11 +155,11 @@ export default {
         const firstClass = evt.target.className.split(" ");
         if (firstClass[0] === "md-list-item-content") {
           if(evt.target.textContent.trim() === "Gewerbe") {
-            this.third_step.ownership_first_name = null;
-            this.third_step.ownership_last_name = null;
+            this.third_step.ownership_first_name = "";
+            this.third_step.ownership_last_name = "";
           }
           if(evt.target.textContent.trim() === "Privatperson") {
-            this.third_step.ownership_company = null;
+            this.third_step.ownership_company = "";
           }
         }
       }, false);

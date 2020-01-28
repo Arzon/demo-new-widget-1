@@ -107,15 +107,15 @@ export default {
       },
       second_step:{
         step: "second_step",
-        customer_first_name: null,
-        customer_last_name: null,
-        customer_company: null,
-        email: null,
-        customer_number: null,
-        street: null,
-        housenumber: null,
-        postal_code: null,
-        city: null
+        customer_first_name: "",
+        customer_last_name: "",
+        customer_company: "",
+        email: "",
+        customer_number: "",
+        street: "",
+        housenumber: "",
+        postal_code: "",
+        city: ""
       }
     };
   },
@@ -127,26 +127,26 @@ export default {
       return this.$refs.form.validate().then(res => {
         let checkTabDepency = false;
         if (
-          this.second_step.customer_first_name !== null &&
-          this.second_step.customer_last_name !== null &&
-          this.second_step.customer_company === null
+          (this.second_step.customer_first_name !== "")  &&
+          (this.second_step.customer_last_name !== "") &&
+          (this.second_step.customer_company === "")
         ) {
           checkTabDepency = true;
         } else if (
-          this.second_step.customer_first_name === null &&
-          this.second_step.customer_last_name === null &&
-          this.second_step.customer_company !== null
+          (this.second_step.customer_first_name === "") &&
+          (this.second_step.customer_last_name === "") &&
+          (this.second_step.customer_company !== "")
         ) {
           checkTabDepency = true;
         }
 
         if (
           !checkTabDepency ||
-          this.second_step.email === null ||
-          this.second_step.street === null ||
-          this.second_step.housenumber === null ||
-          this.second_step.postal_code === null ||
-          this.second_step.city === null
+          this.second_step.email === "" ||
+          this.second_step.street === "" ||
+          this.second_step.housenumber === "" ||
+          this.second_step.postal_code === "" ||
+          this.second_step.city === ""
         ) {
           document.querySelector(".errorSecond").style.display = "block";
         } else {
@@ -161,11 +161,11 @@ export default {
         const firstClass = evt.target.className.split(" ");
         if (firstClass[0] === "md-list-item-content") {
           if(evt.target.textContent.trim() === "Gewerbe") {
-            this.second_step.customer_first_name = null;
-            this.second_step.customer_last_name = null;
+            this.second_step.customer_first_name = "";
+            this.second_step.customer_last_name = "";
           }
           if(evt.target.textContent.trim() === "Privatperson") {
-            this.second_step.customer_company = null;
+            this.second_step.customer_company = "";
           }
         }
       }, false);

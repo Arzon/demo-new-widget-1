@@ -87,15 +87,15 @@ export default {
       },
       fourth_step: {
         step: "fourth_step",
-        ownership_file: null,
-        household_file: null
+        ownership_file: "",
+        household_file: ""
       }
     };
   },
   methods: {
     validate() {
       return this.$refs.form.validate().then(res => {
-        if (this.ownership_file === null || this.household_file === null) {
+        if (this.fourth_step.ownership_file === "" || this.fourth_step.household_file === "") {
           document.querySelector(".errorFourth").style.display = "block";
         } else {
           document.querySelector(".errorFourth").style.display = "none";
@@ -105,7 +105,6 @@ export default {
       });
     },
     updateMelliCodeFrontScan(e) {
-      console.log(e);
       let file = e.target.files;
       if (
         (file[0]["type"] === "application/pdf" ||

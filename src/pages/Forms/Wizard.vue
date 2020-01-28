@@ -91,6 +91,8 @@ export default {
       this.data.fourth_step.company = company[baseUrl];
       const finalData = {...this.data.first_step, ...this.data.second_step, ...this.data.third_step, ...this.data.fourth_step}
       console.log(finalData);
+      this.$router.push("thankyou");
+      // router push
     }
   }
 };

@@ -67,10 +67,10 @@ export default {
     validate() {
       return this.$refs.form.validate().then(res => {
         if (
-          this.confirm_ownership === false ||
-          this.confirm_energy_contract === false ||
-          this.term_conditions === false ||
-          this.term_conditions_greentrax === false
+          this.first_step.confirm_ownership === false ||
+          this.first_step.confirm_energy_contract === false ||
+          this.first_step.term_conditions === false ||
+          this.first_step.term_conditions_greentrax === false
         ) {
           document.querySelector(".error").style.display = "block";
         } else {
