@@ -7,18 +7,18 @@
           <p>{{ this.field_name.heading }}</p>
           <h4>{{ this.field_name.title }}</h4>
           <div class="firstStep-checkbox">
-            <md-checkbox v-model="confirm_ownership">{{
+            <md-checkbox v-model="first_step.confirm_ownership">{{
               this.field_name.confirm_ownership
             }}</md-checkbox>
-            <md-checkbox v-model="confirm_energy_contract">
+            <md-checkbox v-model="first_step.confirm_energy_contract">
               {{ this.field_name.confirm_energy_contract }}
             </md-checkbox>
           </div>
           <div class="firstStep-checkbox">
-            <md-checkbox v-model="term_conditions">{{
+            <md-checkbox v-model="first_step.term_conditions">{{
               this.field_name.term_conditions
             }}</md-checkbox>
-            <md-checkbox v-model="term_conditions_greentrax">{{
+            <md-checkbox v-model="first_step.term_conditions_greentrax">{{
               this.field_name.term_conditions_greentrax
             }}</md-checkbox>
           </div>
@@ -54,10 +54,13 @@ export default {
         term_conditions: lang.de.first_step.term_conditions,
         term_conditions_greentrax: lang.de.first_step.term_conditions_greentrax
       },
-      confirm_ownership: false,
-      confirm_energy_contract: false,
-      term_conditions: false,
-      term_conditions_greentrax: false
+      first_step: {
+        step: "first_step",
+        confirm_ownership: false,
+        confirm_energy_contract: false,
+        term_conditions: false,
+        term_conditions_greentrax: false
+      }
     };
   },
   methods: {
@@ -72,11 +75,12 @@ export default {
           document.querySelector(".error").style.display = "block";
         } else {
           document.querySelector(".error").style.display = "none";
-          this.$emit("on-validated", res);
+          this.$emit("on-validated", this.first_step);
           return res;
         }
       });
-    }
+    },
+
   }
 };
 </script><style></style>

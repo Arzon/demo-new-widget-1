@@ -11,15 +11,14 @@
                 <div class="md-layout-item md-size-50 md-small-size-100">
                   <md-field>
                     <label>{{ this.field_name.first_name }}</label>
-                    <md-input type="text" v-model="first_name"></md-input>
+                    <md-input type="text" v-model="second_step.customer_first_name"></md-input>
                   </md-field>
                 </div>
                 <div class="md-layout-item md-size-50 md-small-size-100">
                   <md-field>
                     <label>{{ this.field_name.last_name }}</label>
-                    <md-input type="text" v-model="last_name"></md-input>
+                    <md-input type="text" v-model="second_step.customer_last_name"></md-input>
                   </md-field>
-                  <input type="hidden" class="tabCheck" id="personal" />
                 </div>
               </div>
             </template>
@@ -28,9 +27,8 @@
                 <div class="md-layout-item md-size-100 md-small-size-100">
                   <md-field>
                     <label>{{ this.field_name.customer_company }}</label>
-                    <md-input type="text" v-model="customer_company"></md-input>
+                    <md-input type="text" v-model="second_step.customer_company"></md-input>
                   </md-field>
-                  <input type="hidden" class="tabCheck" id="company" />
                 </div>
               </div>
             </template>
@@ -39,37 +37,37 @@
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.email }}</label>
-                <md-input type="text" v-model="email"></md-input>
+                <md-input type="text" v-model="second_step.email"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.customer_number }}</label>
-                <md-input type="text" v-model="customer_number"></md-input>
+                <md-input type="text" v-model="second_step.customer_number"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-80 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.street }}</label>
-                <md-input type="text" v-model="street"></md-input>
+                <md-input type="text" v-model="second_step.street"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-20 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.housenumber }}</label>
-                <md-input type="text" v-model="housenumber"></md-input>
+                <md-input type="text" v-model="second_step.housenumber"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-20 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.postal_code }}</label>
-                <md-input type="text" v-model="postal_code"></md-input>
+                <md-input type="text" v-model="second_step.postal_code"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-80 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.city }}</label>
-                <md-input type="text" v-model="city"></md-input>
+                <md-input type="text" v-model="second_step.city"></md-input>
               </md-field>
             </div>
           </div>
@@ -107,58 +105,70 @@ export default {
         postal_code: lang.de.second_step.postal_code,
         city: lang.de.second_step.city
       },
-      first_name: null,
-      last_name: null,
-      customer_company: null,
-      email: null,
-      customer_number: null,
-      street: null,
-      housenumber: null,
-      postal_code: null,
-      city: null
+      second_step:{
+        step: "second_step",
+        customer_first_name: null,
+        customer_last_name: null,
+        customer_company: null,
+        email: null,
+        customer_number: null,
+        street: null,
+        housenumber: null,
+        postal_code: null,
+        city: null
+      }
     };
+  },
+  created() {
+    this.mouseEventTab();
   },
   methods: {
     validate() {
       return this.$refs.form.validate().then(res => {
         let checkTabDepency = false;
-        const tabCheck = document.querySelector(".tabCheck").id;
-        if (tabCheck === "personal") {
-          this.customer_company = null;
-        } else if (tabCheck === "company") {
-          this.first_name = null;
-          this.last_name = null;
-        }
-
         if (
-          this.first_name !== null &&
-          this.last_name !== null &&
-          this.customer_company === null
+          this.second_step.customer_first_name !== null &&
+          this.second_step.customer_last_name !== null &&
+          this.second_step.customer_company === null
         ) {
           checkTabDepency = true;
         } else if (
-          this.first_name === null &&
-          this.last_name === null &&
-          this.customer_company !== null
+          this.second_step.customer_first_name === null &&
+          this.second_step.customer_last_name === null &&
+          this.second_step.customer_company !== null
         ) {
           checkTabDepency = true;
         }
 
         if (
           !checkTabDepency ||
-          this.email === null ||
-          this.street === null ||
-          this.housenumber === null ||
-          this.postal_code === null ||
-          this.city === null
+          this.second_step.email === null ||
+          this.second_step.street === null ||
+          this.second_step.housenumber === null ||
+          this.second_step.postal_code === null ||
+          this.second_step.city === null
         ) {
           document.querySelector(".errorSecond").style.display = "block";
         } else {
           document.querySelector(".errorSecond").style.display = "none";
-          this.$emit("on-validated", res);
+          this.$emit("on-validated", this.second_step);
           return res;
         }
       });
+    },
+    mouseEventTab(){
+      document.body.addEventListener('click', evt => {
+        const firstClass = evt.target.className.split(" ");
+        if (firstClass[0] === "md-list-item-content") {
+          if(evt.target.textContent.trim() === "Gewerbe") {
+            this.second_step.customer_first_name = null;
+            this.second_step.customer_last_name = null;
+          }
+          if(evt.target.textContent.trim() === "Privatperson") {
+            this.second_step.customer_company = null;
+          }
+        }
+      }, false);
     }
   }
 };

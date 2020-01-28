@@ -14,7 +14,7 @@
                     <label>{{ this.field_name.ownership_first_name }}</label>
                     <md-input
                       type="text"
-                      v-model="ownership_first_name"
+                      v-model="third_step.ownership_first_name"
                     ></md-input>
                   </md-field>
                 </div>
@@ -23,10 +23,9 @@
                     <label>{{ this.field_name.ownership_last_name }}</label>
                     <md-input
                       type="text"
-                      v-model="ownership_last_name"
+                      v-model="third_step.ownership_last_name"
                     ></md-input>
                   </md-field>
-                  <input type="hidden" class="tabCheckThird" id="personal" />
                 </div>
               </div>
             </template>
@@ -37,10 +36,9 @@
                     <label>{{ this.field_name.ownership_company }}</label>
                     <md-input
                       type="text"
-                      v-model="ownership_company"
+                      v-model="third_step.ownership_company"
                     ></md-input>
                   </md-field>
-                  <input type="hidden" class="tabCheckThird" id="company" />
                 </div>
               </div>
             </template>
@@ -51,14 +49,14 @@
                 <label>{{ this.field_name.ownership_vehicle_number }}</label>
                 <md-input
                   type="text"
-                  v-model="ownership_vehicle_number"
+                  v-model="third_step.ownership_vehicle_number"
                 ></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-card>
                 <md-card-content>
-                  <md-datepicker v-model="contract_start">
+                  <md-datepicker v-model="third_step.contract_start" md-immediately>
                     <label>{{ this.field_name.contract_start }}</label>
                   </md-datepicker>
                 </md-card-content>
@@ -67,16 +65,11 @@
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-card>
                 <md-card-content>
-                  <md-datepicker v-model="contract_end">
+                  <md-datepicker v-model="third_step.contract_end" md-immediately>
                     <label>{{ this.field_name.contract_end }}</label>
                   </md-datepicker>
                 </md-card-content>
               </md-card>
-            </div>
-          </div>
-          <div class="errorSecond" style="display:none">
-            <div class="alert alert-danger">
-              <span>{{ this.field_name.error }}</span>
             </div>
           </div>
         </div>
@@ -110,52 +103,66 @@ export default {
         contract_start: lang.de.third_step.contract_start,
         contract_end: lang.de.third_step.contract_end
       },
-      ownership_first_name: null,
-      ownership_last_name: null,
-      ownership_company: null,
-      ownership_vehicle_number: null,
-      contract_start: null,
-      contract_end: null
+      third_step: {
+        step: "third_step",
+        ownership_first_name: null,
+        ownership_last_name: null,
+        ownership_company: null,
+        ownership_vehicle_number: null,
+        contract_start: null,
+        contract_end: null
+      }
     };
+  },
+  created() {
+    this.mouseEventTab();
   },
   methods: {
     validate() {
       return this.$refs.form.validate().then(res => {
         let checkTabDepency = false;
-        const tabCheck = document.querySelector(".tabCheckThird").id;
-        if (tabCheck === "personal") {
-          this.ownership_company = null;
-        } else if (tabCheck === "company") {
-          this.ownership_first_name = null;
-          this.ownership_last_name = null;
-        }
+
         if (
-          this.ownership_first_name !== null &&
-          this.ownership_last_name !== null &&
-          this.ownership_company === null
+          this.third_step.ownership_first_name !== null &&
+          this.third_step.ownership_last_name !== null &&
+          this.third_step.ownership_company === null
         ) {
           checkTabDepency = true;
         } else if (
-          this.ownership_first_name === null &&
-          this.ownership_last_name === null &&
-          this.ownership_company !== null
+          this.third_step.ownership_first_name === null &&
+          this.third_step.ownership_last_name === null &&
+          this.third_step.ownership_company !== null
         ) {
           checkTabDepency = true;
         }
 
         if (
           !checkTabDepency ||
-          this.ownership_vehicle_number === null ||
-          this.contract_start === null ||
-          this.contract_end === null
+          this.third_step.ownership_vehicle_number === null ||
+          this.third_step.contract_start === null ||
+          this.third_step.contract_end === null
         ) {
           document.querySelector(".errorThird").style.display = "block";
         } else {
           document.querySelector(".errorThird").style.display = "none";
-          this.$emit("on-validated", res);
+          this.$emit("on-validated", this.third_step);
           return res;
         }
       });
+    },
+    mouseEventTab(){
+      document.body.addEventListener('click', evt => {
+        const firstClass = evt.target.className.split(" ");
+        if (firstClass[0] === "md-list-item-content") {
+          if(evt.target.textContent.trim() === "Gewerbe") {
+            this.third_step.ownership_first_name = null;
+            this.third_step.ownership_last_name = null;
+          }
+          if(evt.target.textContent.trim() === "Privatperson") {
+            this.third_step.ownership_company = null;
+          }
+        }
+      }, false);
     }
   }
 };

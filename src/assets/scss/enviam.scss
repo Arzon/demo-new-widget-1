@@ -1,64 +1,4 @@
 .ev-registration {
-    p, div, .md-checkbox-label {
-        color: #000000;
-        font-weight: 100;
-    }
-    .md-card-wizard .tab-content{
-        padding: 20px 0px;
-    }
-    .md-card {
-        margin: 0;
-    }
-    .firstStep-checkbox {
-        .md-checkbox {
-            margin: 0px ;
-        }
-        margin-bottom: 20px;
-    }
-    .second-step{
-        .md-card .md-card-content{
-            padding: 0;
-        }
-        .md-card {
-            box-shadow: none;
-            max-height: 145px;
-        }
-        .md-card-tabs .md-list {
-            padding: 0;
-        }
-        .md-card-tabs .md-list .md-list-item .md-list-item-button {
-            border-radius: 5px;
-        }
-        .tab-pane-1, .tab-pane-2 {
-            width: 100%;
-        }
-        .adjust {
-            line-height: 4em;
-        }
-    }
-    .md-card-wizard .tab-content{
-        min-height: 100px;
-    }
-    .md-checkbox .md-checkbox-container:before{
-        height: 27px;
-    }
-    @media only screen 
-    and (max-width : 412px){
-        .md-checkbox .md-checkbox-label{
-            height: 40px;
-        }
-    }
-    @media only screen 
-    and (max-width : 800px){
-        .md-checkbox .md-checkbox-label{
-            height: 80px;
-        }
-        .second-step{
-            .md-card {
-                max-height: 204px;
-            }
-        }
-    }
     .moving-tab, .md-button.md-success, .md-button.md-success:hover, .md-button.md-success:focus, .md-button.md-success:active, .md-button.md-success.active, .md-button.md-success:active:focus, .md-button.md-success:active:hover, .md-button.md-success.active:focus, .md-button.md-success.active:hover, .open > .md-button.md-success.dropdown-toggle, .open > .md-button.md-success.dropdown-toggle:focus, .open > .md-button.md-success.dropdown-toggle:hover{
         background-color: #143C8C !important;
     }
@@ -68,27 +8,4 @@
     .md-card-tabs .active.md-list-item.md-warning .md-list-item-button, .md-card-tabs .active.md-list-item.md-warning .md-list-item-button:hover, .md-card-tabs .active.md-list-item.md-warning .md-list-item-button:focus{
         background-color: #143C8C !important;
     }
-
-}
-.thankyou {
-   background-color: #ffffff; 
-   border-radius: 7px;
-   p, h4 {
-       color: #000000
-   }   
-   .logo{
-       text-align: center;
-       margin-top: 30px;
-       height: 100px;
-   }
-   .content {
-       margin-top: 60px;
-       h2{
-           text-align: center;
-           color: #000000
-       }
-       .evLogo{
-           margin-bottom: 60px; 
-       }
-   }
 }

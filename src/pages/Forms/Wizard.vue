@@ -34,15 +34,8 @@
           <template slot="label">
             Nachweise
           </template>
-          <fourth-step ref="step4" @on-validated="wizardComplete"></fourth-step>
+          <fourth-step ref="step4" @on-validated="onStepValidated"></fourth-step>
         </wizard-tab>
-
-        <!-- <wizard-tab :before-change="() => validateStep('step5')">
-          <template slot="label">
-            Thank You
-          </template>
-          <fifth-step ref="step5" @on-validated="wizardComplete"></fifth-step>
-        </wizard-tab> -->
       </simple-wizard>
     </div>
   </div>
@@ -56,13 +49,18 @@ import FourthStep from "./Wizard/FourthStep.vue";
 
 import Swal from "sweetalert2";
 import { SimpleWizard, WizardTab } from "@/components";
-import { logo, baseUrl } from "@/config";
+import { logo, baseUrl, company } from "@/config";
 
 export default {
   name: "registration-wizard",
   data() {
     return {
-      wizardModel: {}
+      data: {
+        first_step: {},
+        second_step: {},
+        third_step: {},
+        fourth_step: {}
+      }
     };
   },
   components: {
@@ -79,30 +77,20 @@ export default {
       default: logo[baseUrl]
     }
   },
-  created(){
-    // const styleEl = document.createElement("style");
-    // styleEl.innerHTML = "@import '"+ baseUrl +".css'";
-    // document.head.appendChild(styleEl);
-  },
   methods: {
     validateStep(ref) {
       return this.$refs[ref].validate();
     },
-    onStepValidated(validated, model) {
-      this.wizardModel = {
-        ...this.wizardModel,
-        ...model
-      };
+    onStepValidated(values) {
+      this.data[values.step] = values;
+      if(values.step === "fourth_step"){
+        this.registrationComplete();
+      }
     },
-    wizardComplete() {
-      // Swal.fire({
-      //   title: "Good job!",
-      //   text: "You clicked the finish button!",
-      //   type: "success",
-      //   confirmButtonClass: "md-button md-success",
-      //   buttonsStyling: false
-      // });
-      this.$router.push("thankyou");
+    registrationComplete() {
+      this.data.fourth_step.company = company[baseUrl];
+      const finalData = {...this.data.first_step, ...this.data.second_step, ...this.data.third_step, ...this.data.fourth_step}
+      console.log(finalData);
     }
   }
 };

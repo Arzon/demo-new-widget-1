@@ -85,8 +85,11 @@ export default {
         ownership_file: lang.de.fourth_step.ownership_file,
         household_file: lang.de.fourth_step.household_file
       },
-      ownership_file: null,
-      household_file: null
+      fourth_step: {
+        step: "fourth_step",
+        ownership_file: null,
+        household_file: null
+      }
     };
   },
   methods: {
@@ -96,7 +99,8 @@ export default {
           document.querySelector(".errorFourth").style.display = "block";
         } else {
           document.querySelector(".errorFourth").style.display = "none";
-          this.$router.push("thankyou");
+          this.$emit("on-validated", this.fourth_step);
+          return res;
         }
       });
     },
@@ -110,9 +114,9 @@ export default {
         file[0]["size"] <= 5242880
       ) {
         if (e.target.id === "ownership_file") {
-          this.ownership_file = file[0];
+          this.fourth_step.ownership_file = file[0];
         } else if (e.target.id === "household_file") {
-          this.household_file = file[0];
+          this.fourth_step.household_file = file[0];
         }
       } else {
         document.getElementById(e.target.id).value = "";
