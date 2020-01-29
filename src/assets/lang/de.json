@@ -1,48 +1,48 @@
 {
     "de": {
         "first_step": {
-            "error": "this is the error message",
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis.",
-            "title": "Voraussetzungen für die Elektroauto-Registrierung",
+            "error": "Bitte fülle alle erforderlichen Felder aus!",
+            "heading": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und zu einem zukünftig nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren",
+            "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
             "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
             "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
-            "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu.",
-            "term_conditions_greentrax": "Ich stimme zu, dass meine Daten von GreenTrax gespeichert und zum Zweck der THG-Prämie mit [COMPANY] geteilt werden."
+            "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
+            "term_conditions_greentrax": "Test"
         },
         "second_step": {
-            "error": "this is the error message",
-            "title": "Energy Contract Data",
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.",
+            "error": "Bitte fülle alle erforderlichen Felder aus!",
+            "title": "Daten zu deinem Stromvertrag",
+            "heading": "Trage hier die Daten zu deinem Stromvertrag ein. Wir benötigen diese, damit die Anrechnung der Treibhausgas-Emissionseinsparungen nach der 38. BImschV deinem Stromvertrag zugeordnet werden kann.",
             "first_name": "Vorname (laut Stromvertrag)*",
             "last_name": "Nachname (laut Stromvertrag)*",
             "customer_company": "Unternehmen (laut Stromvertrag)*",
             "email": "E-Mail Adresse*",
-            "customer_number": "Kunden- oder Vertragsnummer",
+            "customer_number": "Kunden- oder Vertragsnummer (optional)",
             "street": "Strasse*",
             "housenumber": "Hausnummer*",
             "postal_code": "Postleitzahl*",
             "city": "Ort*"
         },
         "third_step": {
-            "error": "this is the error message",
-            "title": "Electric Vehicle Ownership Data",
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.",
+            "error": "Bitte fülle alle erforderlichen Felder aus!",
+            "title": "Daten zu deinem Elektroauto",
+            "heading": "Trage hier die Daten zu deinem reinen Elektroauto ein. Wir benötigen diese, damit die Anrechnung der Treibhausgas-Emissionseinsparungen nach der 38. BImschV deinem Elektrofahrzeug zugeordnet werden kann.",
             "ownership_company": "Unternehmen (laut KFZ-Zulassungsbescheinigung)*",
             "ownership_first_name": "Vorname (laut KFZ-Zulassungsbescheinigung)*",
             "ownership_last_name": "Nachname (laut KFZ-Zulassungsbescheinigung)*",
-            "ownership_vehicle_number": "KFZ Kennzeichen*",
+            "ownership_vehicle_number": "KFZ-Kennzeichen*",
             "contract_start": "Datum Zulassung",
             "contract_end": "Datum Abmeldung"
         },
         "fourth_step":{
-            "error": "this is the error message",
-            "title": "Upload Proof Files",
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.",
-            "ownership_file": "EV Ownership File",
-            "household_file": "Other Proof File"
+            "error": "Bitte fülle alle erforderlichen Felder aus!",
+            "title": "Nachweise hochladen",
+            "heading": "Als Nachweis für die Zulassung eines reinen Batterie-Elektrofahrzeuges benötigen wir ein Foto/Kopie deiner Zulassungsbescheinigung Teil I (Fahrzeugschein). Je nach Konstellation bezüglich Stromvertrag und Zulassung benötigen wir darüber hinaus noch weitere Nachweise. Die Tabelle gibt einen Überblick.",
+            "ownership_file": "KFZ Zulassungsbescheinigung Teil I",
+            "household_file": "Sonstige Nachweise (als Foto oder Kopien)"
         },
         "fifth_step": {
-            "title": "Thank you!",
+            "title": "Vielen Dank!",
             "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui."
         }
     }

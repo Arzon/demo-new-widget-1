@@ -3,7 +3,7 @@
     <md-toolbar md-elevation="0" class="md-transparent md-toolbar-absolute">
       <div class="md-toolbar-row md-offset">
         <div class="md-toolbar-section-start">
-          <h3 class="md-title">Ev Registration Form</h3>
+        <!--  <h3 class="md-title">Registrierung Elektroauto</h3> -->
         </div>
       </div>
     </md-toolbar>
@@ -25,7 +25,7 @@
         <footer class="footer">
           <div class="container md-offset">
             <nav>
-              <ul>
+              <!--<ul>
                 <li>
                   <a target="_blank" href="https://www.greentrax.de/">
                     Our Website
@@ -41,14 +41,14 @@
                     Contact Us
                   </a>
                 </li>
-              </ul>
-            </nav>
+              </ul>-->
+            </nav> 
             <div class="copyright text-center">
-              &copy; {{ new Date().getFullYear() }}
-              <a
+              <!--&copy; {{ new Date().getFullYear() }}-->
+              Service bereitgestellt von <a
                 href="https://www.greentrax.de"
                 target="_blank"
-                >Greentrax</a>
+                >GreenTrax.de</a>
             </div>
           </div>
         </footer>

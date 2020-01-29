@@ -40,7 +40,7 @@ export default {
   props: {
     banner: {
       type: String,
-      default: require("@/assets/img/banner.png")
+      default: require("@/assets/img/banner2.png")
     }
   },
   data() {

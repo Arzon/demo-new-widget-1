@@ -121,9 +121,9 @@ export default {
         document.getElementById(e.target.id).value = "";
         Swal.fire({
           icon: "error",
-          title: "Oops...",
+          title: "Ups...",
           text:
-            "Invalid file format or upload file size crossed the maximum limit of size"
+            "Deine Datei hat ein falsches Dateiformat (.pdf, .jpeg, .png) oder ist zu groß (15 MB). Bitte versuche es erneut."
         });
       }
     }

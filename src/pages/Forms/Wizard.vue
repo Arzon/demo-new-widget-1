@@ -15,7 +15,7 @@
 
         <wizard-tab :before-change="() => validateStep('step2')">
           <template slot="label">
-            Daten Stromvertrag
+            Stromvertrag
           </template>
           <second-step
             ref="step2"
@@ -25,7 +25,7 @@
 
         <wizard-tab :before-change="() => validateStep('step3')">
           <template slot="label">
-            Daten E-Auto
+            Elektroauto
           </template>
           <third-step ref="step3" @on-validated="onStepValidated"></third-step>
         </wizard-tab>
