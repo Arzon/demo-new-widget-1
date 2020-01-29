@@ -2,7 +2,7 @@
     "de": {
         "first_step": {
             "error": "Bitte fülle alle erforderlichen Felder aus!",
-            "heading": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und zu einem zukünftig nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren",
+            "heading": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und damit zu einem nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV) wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren",
             "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
             "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
             "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
@@ -36,15 +36,15 @@
             "contract_end": "Datum Abmeldung"
         },
         "fourth_step":{
-            "error": "Bitte fülle alle erforderlichen Felder aus!",
+            "error": "Bitte lade mindestens eine Datei hoch (mindestens ein Foto/Kopie der Zulassungsbescheinigung Teil I)!",
             "title": "Nachweise hochladen",
-            "heading": "Als Nachweis für die Zulassung eines reinen Batterie-Elektrofahrzeuges benötigen wir ein Foto/Kopie deiner Zulassungsbescheinigung Teil I (Fahrzeugschein). Je nach Konstellation bezüglich Stromvertrag und Zulassung benötigen wir darüber hinaus noch weitere Nachweise. Die Tabelle gibt einen Überblick.",
+            "heading": "Als Nachweis für die Zulassung eines reinen Batterie-Elektrofahrzeuges benötigen wir ein Foto/Kopie deiner Zulassungsbescheinigung Teil I (Fahrzeugschein). Je nach Konstellation bezüglich Stromvertrag und Zulassung benötigen wir darüber hinaus noch weitere Nachweise. Die Tabelle gibt einen Überblick. Hinweis: Bitte stelle sicher, dass die Schrift lesbar ist, ansonsten können wir den Bonus leider nicht auszahlen.",
             "ownership_file": "KFZ Zulassungsbescheinigung Teil I",
-            "household_file": "Sonstige Nachweise (als Foto oder Kopien)"
+            "household_file": "Sonstige Nachweise (als Foto oder Kopie)"
         },
         "fifth_step": {
             "title": "Vielen Dank!",
-            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui."
+            "heading": "Du wirst in wenigen Sekunden zur [Company] Webseite weitergeleitet."
         }
     }
 }

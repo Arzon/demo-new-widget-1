@@ -6,7 +6,7 @@
           <h4>{{ this.field_name.title }}</h4>
           <p>{{ this.field_name.heading }}</p>
           <div class="md-layout">
-            <label class="md-layout-item md-size-20 md-form-label">
+            <label class="md-layout-item md-size-50 md-form-label">
               {{ this.field_name.ownership_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
@@ -21,8 +21,8 @@
           <md-card-content>
             <md-table v-model="tableData" table-header-color="green">
               <md-table-row slot="md-table-row" slot-scope="{ item }">
-                <md-table-cell md-label="Case">{{ item.key }}</md-table-cell>
-                <md-table-cell md-label="Required Proof">{{
+                <md-table-cell md-label="Sonderfall/Konstellation">{{ item.key }}</md-table-cell>
+                <md-table-cell md-label="Zusätzlicher Nachweis">{{
                   item.value
                 }}</md-table-cell>
               </md-table-row>
@@ -30,7 +30,7 @@
           </md-card-content>
 
           <div class="md-layout">
-            <label class="md-layout-item md-size-20 md-form-label">
+            <label class="md-layout-item md-size-50 md-form-label">
               {{ this.field_name.household_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
@@ -62,21 +62,17 @@ export default {
     return {
       tableData: [
         {
-          key: "Ada Lovelace",
-          value: "December 10, 1815"
+          key: "Name (Privatperson oder Unternehmen) stimmen überein.",
+          value: "-"
         },
         {
-          key: "Grace Hopper",
-          value: "December 9, 1906"
+          key: "Halter des Elektroautos ist andere Person aber wohnt im selben Haushalt.",
+          value: "Personalausweis"
         },
         {
-          key: "Margaret Hamilton",
-          value: "August 17, 1936"
+          key: "Das Elektroauto ist ein Dienstwagen und auf ein Unternehmen zugelassen.",
+          value: "Bescheinigung Dienstwagen"
         },
-        {
-          key: "Joan Clarke",
-          value: "June 24, 1917"
-        }
       ],
       field_name: {
         error: "",
@@ -125,7 +121,7 @@ export default {
           icon: "error",
           title: "Ups...",
           text:
-            "Deine Datei hat ein falsches Dateiformat (.pdf, .jpeg, .png) oder ist zu groß (15 MB). Bitte versuche es erneut."
+            "Deine Datei hat ein falsches Dateiformat (erforderlich ist entweder .pdf, .jpeg oder .png). Oder deine Datei ist zu groß (15 MB). Bitte versuche es erneut."
         });
       }
     }

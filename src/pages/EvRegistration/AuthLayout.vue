@@ -45,7 +45,7 @@
             </nav> 
             <div class="copyright text-center">
               <!--&copy; {{ new Date().getFullYear() }}-->
-              Service bereitgestellt von <a
+              bereitgestellt von <a
                 href="https://www.greentrax.de"
                 target="_blank"
                 >GreenTrax.de</a>

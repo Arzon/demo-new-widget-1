@@ -99,6 +99,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .evLogo {
-  height: 100px;
+  height: 80px;
 }
 </style>

@@ -88,7 +88,7 @@
    .logo{
        text-align: center;
        margin-top: 30px;
-       height: 100px;
+       height: 80px;
    }
    .content {
        margin-top: 60px;
@@ -96,8 +96,13 @@
            text-align: center;
            color: #000000
        }
+       p{
+        text-align: center;
+        color: #000000
+    }
        .evLogo{
-           margin-bottom: 60px; 
+        text-align: center;   
+        margin-bottom: 60px; 
        }
    }
 }
