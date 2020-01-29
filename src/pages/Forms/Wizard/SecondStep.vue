@@ -84,6 +84,7 @@
 <script>
 import { Tabs } from "@/components";
 import lang from "@/assets/lang/de.json";
+import utils from "@/utils.js";
 
 export default {
   components: {
@@ -92,7 +93,7 @@ export default {
   data() {
     return {
       field_name: {
-        error: lang.de.second_step.error,
+        error: "",
         title: lang.de.second_step.title,
         heading: lang.de.second_step.heading,
         first_name: lang.de.second_step.first_name,
@@ -147,10 +148,16 @@ export default {
           this.second_step.housenumber === "" ||
           this.second_step.postal_code === "" ||
           this.second_step.city === ""
-        ) {
+        ){
           document.querySelector(".errorSecond").style.display = "block";
-        } else {
+          this.field_name.error = lang.de.second_step.error;
+        }else if( !utils.emailValidation(this.second_step.email) ){
+          this.field_name.error = lang.de.second_step.email_error;
+          document.querySelector(".errorSecond").style.display = "block";
+        } 
+        else {
           document.querySelector(".errorSecond").style.display = "none";
+          this.field_name.error = "";
           this.$emit("on-validated", this.second_step);
           return res;
         }

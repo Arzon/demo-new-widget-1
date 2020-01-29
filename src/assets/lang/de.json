@@ -21,7 +21,8 @@
             "street": "Strasse*",
             "housenumber": "Hausnummer*",
             "postal_code": "Postleitzahl*",
-            "city": "Ort*"
+            "city": "Ort*",
+            "email_error": "Bitte gib eine gültige E-Mail Adresse ein!"
         },
         "third_step": {
             "error": "Bitte fülle alle erforderlichen Felder aus!",

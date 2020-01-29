@@ -79,7 +79,7 @@ export default {
         }
       ],
       field_name: {
-        error: lang.de.fourth_step.error,
+        error: "",
         heading: lang.de.fourth_step.heading,
         title: lang.de.fourth_step.title,
         ownership_file: lang.de.fourth_step.ownership_file,
@@ -97,8 +97,10 @@ export default {
       return this.$refs.form.validate().then(res => {
         if (this.fourth_step.ownership_file === "" || this.fourth_step.household_file === "") {
           document.querySelector(".errorFourth").style.display = "block";
+          this.field_name.error = lang.de.fourth_step.error;
         } else {
           document.querySelector(".errorFourth").style.display = "none";
+          this.field_name.error = "";
           this.$emit("on-validated", this.fourth_step);
           return res;
         }

@@ -93,7 +93,7 @@ export default {
   data() {
     return {
       field_name: {
-        error: lang.de.third_step.error,
+        error: "",
         heading: lang.de.third_step.heading,
         title: lang.de.third_step.title,
         ownership_first_name: lang.de.third_step.ownership_first_name,
@@ -143,8 +143,10 @@ export default {
           this.third_step.contract_end === ""
         ) {
           document.querySelector(".errorThird").style.display = "block";
+          this.field_name.error = lang.de.third_step.error;
         } else {
           document.querySelector(".errorThird").style.display = "none";
+          this.field_name.error = "";
           this.$emit("on-validated", this.third_step);
           return res;
         }

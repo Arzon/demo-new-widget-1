@@ -1,4 +1,11 @@
 .ev-registration {
+    .evLogo {
+        width: auto;
+        border-radius: 0 !important;
+    }
+    .md-card-header{
+        margin: auto;
+    }
     p, div, .md-checkbox-label {
         color: #000000;
         font-weight: 100;

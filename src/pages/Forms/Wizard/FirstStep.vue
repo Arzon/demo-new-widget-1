@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       field_name: {
-        error: lang.de.first_step.error,
+        error: "",
         heading: lang.de.first_step.heading,
         title: lang.de.first_step.title,
         confirm_ownership: lang.de.first_step.confirm_ownership,
@@ -73,8 +73,10 @@ export default {
           this.first_step.term_conditions_greentrax === false
         ) {
           document.querySelector(".error").style.display = "block";
+          this.field_name.error = lang.de.first_step.error;
         } else {
           document.querySelector(".error").style.display = "none";
+          this.field_name.error = "";
           this.$emit("on-validated", this.first_step);
           return res;
         }

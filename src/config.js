@@ -14,6 +14,12 @@ export const company = {
   enviam: "enviam"
 };
 
+export const redirectUrl = {
+  innogy: "https://www.innogy-emobility.com/elektromobilitaet",
+  marke: "https://www.mark-e.de/",
+  enviam: "https://www.enviam.de/elektromobilitaet"
+};
+
 export const baseUrl = window.location.host
   .substr(0, window.location.host.indexOf(":"))
   .replace("-", "");
