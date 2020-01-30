@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### install dependencies
 `npm install`
 
@@ -7,3 +6,7 @@
 
 ### build for production with minification
 `npm run build`
+
+### create .gitignore file and the following line
+- node_modules/
+- appConfig.js
