@@ -11,13 +11,19 @@
                 <div class="md-layout-item md-size-50 md-small-size-100">
                   <md-field>
                     <label>{{ this.field_name.first_name }}</label>
-                    <md-input type="text" v-model="second_step.customer_first_name"></md-input>
+                    <md-input
+                      type="text"
+                      v-model="second_step.customer_first_name"
+                    ></md-input>
                   </md-field>
                 </div>
                 <div class="md-layout-item md-size-50 md-small-size-100">
                   <md-field>
                     <label>{{ this.field_name.last_name }}</label>
-                    <md-input type="text" v-model="second_step.customer_last_name"></md-input>
+                    <md-input
+                      type="text"
+                      v-model="second_step.customer_last_name"
+                    ></md-input>
                   </md-field>
                 </div>
               </div>
@@ -27,7 +33,10 @@
                 <div class="md-layout-item md-size-100 md-small-size-100">
                   <md-field>
                     <label>{{ this.field_name.customer_company }}</label>
-                    <md-input type="text" v-model="second_step.customer_company"></md-input>
+                    <md-input
+                      type="text"
+                      v-model="second_step.customer_company"
+                    ></md-input>
                   </md-field>
                 </div>
               </div>
@@ -43,7 +52,10 @@
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.customer_number }}</label>
-                <md-input type="text" v-model="second_step.customer_number"></md-input>
+                <md-input
+                  type="text"
+                  v-model="second_step.customer_number"
+                ></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-80 md-small-size-100">
@@ -55,13 +67,19 @@
             <div class="md-layout-item md-size-20 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.housenumber }}</label>
-                <md-input type="text" v-model="second_step.housenumber"></md-input>
+                <md-input
+                  type="text"
+                  v-model="second_step.housenumber"
+                ></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-20 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.postal_code }}</label>
-                <md-input type="text" v-model="second_step.postal_code"></md-input>
+                <md-input
+                  type="text"
+                  v-model="second_step.postal_code"
+                ></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-80 md-small-size-100">
@@ -106,7 +124,7 @@ export default {
         postal_code: lang.de.second_step.postal_code,
         city: lang.de.second_step.city
       },
-      second_step:{
+      second_step: {
         step: "second_step",
         customer_first_name: "",
         customer_last_name: "",
@@ -128,15 +146,15 @@ export default {
       return this.$refs.form.validate().then(res => {
         let checkTabDepency = false;
         if (
-          (this.second_step.customer_first_name !== "")  &&
-          (this.second_step.customer_last_name !== "") &&
-          (this.second_step.customer_company === "")
+          this.second_step.customer_first_name !== "" &&
+          this.second_step.customer_last_name !== "" &&
+          this.second_step.customer_company === ""
         ) {
           checkTabDepency = true;
         } else if (
-          (this.second_step.customer_first_name === "") &&
-          (this.second_step.customer_last_name === "") &&
-          (this.second_step.customer_company !== "")
+          this.second_step.customer_first_name === "" &&
+          this.second_step.customer_last_name === "" &&
+          this.second_step.customer_company !== ""
         ) {
           checkTabDepency = true;
         }
@@ -148,14 +166,13 @@ export default {
           this.second_step.housenumber === "" ||
           this.second_step.postal_code === "" ||
           this.second_step.city === ""
-        ){
+        ) {
           document.querySelector(".errorSecond").style.display = "block";
           this.field_name.error = lang.de.second_step.error;
-        }else if( !utils.emailValidation(this.second_step.email) ){
+        } else if (!utils.emailValidation(this.second_step.email)) {
           this.field_name.error = lang.de.second_step.email_error;
           document.querySelector(".errorSecond").style.display = "block";
-        } 
-        else {
+        } else {
           document.querySelector(".errorSecond").style.display = "none";
           this.field_name.error = "";
           this.$emit("on-validated", this.second_step);
@@ -163,19 +180,23 @@ export default {
         }
       });
     },
-    mouseEventTab(){
-      document.body.addEventListener('click', evt => {
-        const firstClass = evt.target.className.split(" ");
-        if (firstClass[0] === "md-list-item-content") {
-          if(evt.target.textContent.trim() === "Gewerbe") {
-            this.second_step.customer_first_name = "";
-            this.second_step.customer_last_name = "";
+    mouseEventTab() {
+      document.body.addEventListener(
+        "click",
+        evt => {
+          const firstClass = evt.target.className.split(" ");
+          if (firstClass[0] === "md-list-item-content") {
+            if (evt.target.textContent.trim() === "Gewerbe") {
+              this.second_step.customer_first_name = "";
+              this.second_step.customer_last_name = "";
+            }
+            if (evt.target.textContent.trim() === "Privatperson") {
+              this.second_step.customer_company = "";
+            }
           }
-          if(evt.target.textContent.trim() === "Privatperson") {
-            this.second_step.customer_company = "";
-          }
-        }
-      }, false);
+        },
+        false
+      );
     }
   }
 };

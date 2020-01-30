@@ -34,7 +34,10 @@
           <template slot="label">
             Nachweise
           </template>
-          <fourth-step ref="step4" @on-validated="onStepValidated"></fourth-step>
+          <fourth-step
+            ref="step4"
+            @on-validated="onStepValidated"
+          ></fourth-step>
         </wizard-tab>
       </simple-wizard>
     </div>
@@ -83,13 +86,18 @@ export default {
     },
     onStepValidated(values) {
       this.data[values.step] = values;
-      if(values.step === "fourth_step"){
+      if (values.step === "fourth_step") {
         this.registrationComplete();
       }
     },
     registrationComplete() {
       this.data.fourth_step.company = company[baseUrl];
-      const finalData = {...this.data.first_step, ...this.data.second_step, ...this.data.third_step, ...this.data.fourth_step}
+      const finalData = {
+        ...this.data.first_step,
+        ...this.data.second_step,
+        ...this.data.third_step,
+        ...this.data.fourth_step
+      };
       console.log(finalData);
       this.$router.push("thankyou");
       // router push

@@ -23,7 +23,9 @@
             }}</md-checkbox>
           </div>
           <div class="error" style="display:none">
-            <div class="alert alert-danger"><span>{{ this.field_name.error }}</span></div>
+            <div class="alert alert-danger">
+              <span>{{ this.field_name.error }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -81,8 +83,8 @@ export default {
           return res;
         }
       });
-    },
-
+    }
   }
 };
-</script><style></style>
+</script>
+<style></style>

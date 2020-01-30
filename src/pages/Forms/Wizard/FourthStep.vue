@@ -21,7 +21,9 @@
           <md-card-content>
             <md-table v-model="tableData" table-header-color="green">
               <md-table-row slot="md-table-row" slot-scope="{ item }">
-                <md-table-cell md-label="Sonderfall/Konstellation">{{ item.key }}</md-table-cell>
+                <md-table-cell md-label="Sonderfall/Konstellation">{{
+                  item.key
+                }}</md-table-cell>
                 <md-table-cell md-label="Zusätzlicher Nachweis">{{
                   item.value
                 }}</md-table-cell>
@@ -66,13 +68,15 @@ export default {
           value: "-"
         },
         {
-          key: "Halter des Elektroautos ist andere Person aber wohnt im selben Haushalt.",
+          key:
+            "Halter des Elektroautos ist andere Person aber wohnt im selben Haushalt.",
           value: "Personalausweis"
         },
         {
-          key: "Das Elektroauto ist ein Dienstwagen und auf ein Unternehmen zugelassen.",
+          key:
+            "Das Elektroauto ist ein Dienstwagen und auf ein Unternehmen zugelassen.",
           value: "Bescheinigung Dienstwagen"
-        },
+        }
       ],
       field_name: {
         error: "",
@@ -91,7 +95,10 @@ export default {
   methods: {
     validate() {
       return this.$refs.form.validate().then(res => {
-        if (this.fourth_step.ownership_file === "" || this.fourth_step.household_file === "") {
+        if (
+          this.fourth_step.ownership_file === "" ||
+          this.fourth_step.household_file === ""
+        ) {
           document.querySelector(".errorFourth").style.display = "block";
           this.field_name.error = lang.de.fourth_step.error;
         } else {

@@ -3,7 +3,7 @@
     <md-toolbar md-elevation="0" class="md-transparent md-toolbar-absolute">
       <div class="md-toolbar-row md-offset">
         <div class="md-toolbar-section-start">
-        <!--  <h3 class="md-title">Registrierung Elektroauto</h3> -->
+          <!--  <h3 class="md-title">Registrierung Elektroauto</h3> -->
         </div>
       </div>
     </md-toolbar>
@@ -42,13 +42,13 @@
                   </a>
                 </li>
               </ul>-->
-            </nav> 
+            </nav>
             <div class="copyright text-center">
               <!--&copy; {{ new Date().getFullYear() }}-->
-              bereitgestellt von <a
-                href="https://www.greentrax.de"
-                target="_blank"
-                >GreenTrax.de</a>
+              bereitgestellt von
+              <a href="https://www.greentrax.de" target="_blank"
+                >GreenTrax.de</a
+              >
             </div>
           </div>
         </footer>

@@ -56,7 +56,10 @@
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-card>
                 <md-card-content>
-                  <md-datepicker v-model="third_step.contract_start" md-immediately>
+                  <md-datepicker
+                    v-model="third_step.contract_start"
+                    md-immediately
+                  >
                     <label>{{ this.field_name.contract_start }}</label>
                   </md-datepicker>
                 </md-card-content>
@@ -65,7 +68,10 @@
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-card>
                 <md-card-content>
-                  <md-datepicker v-model="third_step.contract_end" md-immediately>
+                  <md-datepicker
+                    v-model="third_step.contract_end"
+                    md-immediately
+                  >
                     <label>{{ this.field_name.contract_end }}</label>
                   </md-datepicker>
                 </md-card-content>
@@ -152,19 +158,23 @@ export default {
         }
       });
     },
-    mouseEventTab(){
-      document.body.addEventListener('click', evt => {
-        const firstClass = evt.target.className.split(" ");
-        if (firstClass[0] === "md-list-item-content") {
-          if(evt.target.textContent.trim() === "Gewerbe") {
-            this.third_step.ownership_first_name = "";
-            this.third_step.ownership_last_name = "";
+    mouseEventTab() {
+      document.body.addEventListener(
+        "click",
+        evt => {
+          const firstClass = evt.target.className.split(" ");
+          if (firstClass[0] === "md-list-item-content") {
+            if (evt.target.textContent.trim() === "Gewerbe") {
+              this.third_step.ownership_first_name = "";
+              this.third_step.ownership_last_name = "";
+            }
+            if (evt.target.textContent.trim() === "Privatperson") {
+              this.third_step.ownership_company = "";
+            }
           }
-          if(evt.target.textContent.trim() === "Privatperson") {
-            this.third_step.ownership_company = "";
-          }
-        }
-      }, false);
+        },
+        false
+      );
     }
   }
 };
