@@ -1,13 +1,13 @@
-// import axios from "axios";
-// import serverUrl from "../../dashboard_config.json";
-
-// export default {
-//   async getDocuments(accessToken) {
-//     let res = await axios.get(`${serverUrl.url}/api/get-all-documents`, {
-//       headers: {
-//         Authorization: `Bearer ${accessToken}`
-//       }
-//     });
-//     return res.data;
-//   }
-// };
+export default {
+  async insertDocuments(url, basicToken, data) {
+    const headers = new Headers({
+      Authorization: `Basic ${basicToken}`
+    });
+    const response = await fetch(url, {
+      method: "POST",
+      headers: headers,
+      body: data
+    });
+    return response;
+  }
+};

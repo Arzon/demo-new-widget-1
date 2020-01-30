@@ -48,6 +48,7 @@ import FirstStep from "./Wizard/FirstStep.vue";
 import SecondStep from "./Wizard/SecondStep.vue";
 import ThirdStep from "./Wizard/ThirdStep.vue";
 import FourthStep from "./Wizard/FourthStep.vue";
+import Api from "@/services/api";
 // import FifthStep from "./Wizard/FifthStep.vue";
 
 import Swal from "sweetalert2";
@@ -98,9 +99,33 @@ export default {
         ...this.data.third_step,
         ...this.data.fourth_step
       };
+      // const formData = new FormData();
+
+      // finalData.forEach(item => {
+      //   console.log(item);
+      // });
+      let formData = new FormData();
+      delete finalData.step;
+
       console.log(finalData);
-      this.$router.push("thankyou");
-      // router push
+
+      Object.keys(finalData).forEach(key => {
+        console.log(key + ":" + finalData[key]);
+        if (key === "ownership_file" || key === "household_file") {
+          formData.append(key, finalData[key]);
+        } else {
+          formData.set(key, finalData[key]);
+        }
+      });
+
+      Api.insertDocuments(url, basicToken, formData)
+        .then(res => {
+          console.log(res);
+          this.$router.push("thankyou");
+        })
+        .catch(() => {
+          console.log("something went worng");
+        });
     }
   }
 };
