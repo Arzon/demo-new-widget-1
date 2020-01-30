@@ -15,6 +15,7 @@ export const company = {
 };
 
 export const redirectUrl = {
+  localhost: "https://www.innogy-emobility.com/elektromobilitaet",
   innogy: "https://www.innogy-emobility.com/elektromobilitaet",
   marke: "https://www.mark-e.de/",
   enviam: "https://www.enviam.de/elektromobilitaet"

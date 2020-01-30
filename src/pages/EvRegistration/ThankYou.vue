@@ -18,7 +18,7 @@
 <script>
 import { SignupCard } from "@/components";
 import lang from "@/assets/lang/de.json";
-import { logo } from "@/config";
+import { logo, baseUrl, redirectUrl } from "@/config";
 export default {
   components: {
     // SignupCard
@@ -30,7 +30,7 @@ export default {
     },
     logo: {
       type: String,
-      default: logo[window.location.host.substr(0, window.location.host.indexOf(':')).replace("-","") ]
+      default: logo[baseUrl]
     }
   },
   data() {
@@ -40,6 +40,11 @@ export default {
         title: lang.de.fifth_step.title
       }
     };
+  },
+  mounted() {
+    this.myInterval = setInterval(() => {
+      window.location.href = redirectUrl[baseUrl];
+    }, 5000);
   }
 };
 </script>
