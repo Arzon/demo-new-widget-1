@@ -32,15 +32,15 @@
             "ownership_first_name": "Vorname (laut KFZ-Zulassungsbescheinigung)*",
             "ownership_last_name": "Nachname (laut KFZ-Zulassungsbescheinigung)*",
             "ownership_vehicle_number": "KFZ-Kennzeichen*",
-            "contract_start": "Datum Zulassung",
-            "contract_end": "Datum Abmeldung"
+            "ownership_start": "Datum Zulassung",
+            "ownership_end": "Datum Abmeldung"
         },
         "fourth_step":{
             "error": "Bitte lade mindestens eine Datei hoch (mindestens ein Foto/Kopie der Zulassungsbescheinigung Teil I)!",
             "title": "Nachweise hochladen",
             "heading": "Als Nachweis für die Zulassung eines reinen Batterie-Elektrofahrzeuges benötigen wir ein Foto/Kopie deiner Zulassungsbescheinigung Teil I (Fahrzeugschein). Je nach Konstellation bezüglich Stromvertrag und Zulassung benötigen wir darüber hinaus noch weitere Nachweise. Die Tabelle gibt einen Überblick. Hinweis: Bitte stelle sicher, dass die Schrift lesbar ist, ansonsten können wir den Bonus leider nicht auszahlen.",
             "ownership_file": "KFZ Zulassungsbescheinigung Teil I",
-            "household_file": "Sonstige Nachweise (als Foto oder Kopie)"
+            "proof_file": "Sonstige Nachweise (als Foto oder Kopie)"
         },
         "fifth_step": {
             "title": "Vielen Dank!",

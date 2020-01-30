@@ -46,7 +46,7 @@
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.email }}</label>
-                <md-input type="text" v-model="second_step.email"></md-input>
+                <md-input type="text" v-model="second_step.customer_email"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-50 md-small-size-100">
@@ -61,7 +61,7 @@
             <div class="md-layout-item md-size-80 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.street }}</label>
-                <md-input type="text" v-model="second_step.street"></md-input>
+                <md-input type="text" v-model="second_step.address_street"></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-20 md-small-size-100">
@@ -69,7 +69,7 @@
                 <label>{{ this.field_name.housenumber }}</label>
                 <md-input
                   type="text"
-                  v-model="second_step.housenumber"
+                  v-model="second_step.address_housenumber"
                 ></md-input>
               </md-field>
             </div>
@@ -78,14 +78,14 @@
                 <label>{{ this.field_name.postal_code }}</label>
                 <md-input
                   type="text"
-                  v-model="second_step.postal_code"
+                  v-model="second_step.address_postal_code"
                 ></md-input>
               </md-field>
             </div>
             <div class="md-layout-item md-size-80 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.city }}</label>
-                <md-input type="text" v-model="second_step.city"></md-input>
+                <md-input type="text" v-model="second_step.address_city"></md-input>
               </md-field>
             </div>
           </div>
@@ -129,12 +129,12 @@ export default {
         customer_first_name: "",
         customer_last_name: "",
         customer_company: "",
-        email: "",
         customer_number: "",
-        street: "",
-        housenumber: "",
-        postal_code: "",
-        city: ""
+        customer_email: "",
+        address_street: "",
+        address_housenumber: "",
+        address_postal_code: "",
+        address_city: ""
       }
     };
   },
@@ -161,15 +161,15 @@ export default {
 
         if (
           !checkTabDepency ||
-          this.second_step.email === "" ||
-          this.second_step.street === "" ||
-          this.second_step.housenumber === "" ||
-          this.second_step.postal_code === "" ||
-          this.second_step.city === ""
+          this.second_step.customer_email === "" ||
+          this.second_step.address_street === "" ||
+          this.second_step.address_housenumber === "" ||
+          this.second_step.address_postal_code === "" ||
+          this.second_step.address_city === ""
         ) {
           document.querySelector(".errorSecond").style.display = "block";
           this.field_name.error = lang.de.second_step.error;
-        } else if (!utils.emailValidation(this.second_step.email)) {
+        } else if (!utils.emailValidation(this.second_step.customer_email)) {
           this.field_name.error = lang.de.second_step.email_error;
           document.querySelector(".errorSecond").style.display = "block";
         } else {

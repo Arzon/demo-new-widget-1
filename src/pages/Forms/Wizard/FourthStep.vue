@@ -33,12 +33,12 @@
 
           <div class="md-layout">
             <label class="md-layout-item md-size-50 md-form-label">
-              {{ this.field_name.household_file }}
+              {{ this.field_name.proof_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
               <input
                 type="file"
-                id="household_file"
+                id="proof_file"
                 @change="updateMelliCodeFrontScan"
               />
             </div>
@@ -83,12 +83,12 @@ export default {
         heading: lang.de.fourth_step.heading,
         title: lang.de.fourth_step.title,
         ownership_file: lang.de.fourth_step.ownership_file,
-        household_file: lang.de.fourth_step.household_file
+        proof_file: lang.de.fourth_step.proof_file
       },
       fourth_step: {
         step: "fourth_step",
         ownership_file: "",
-        household_file: ""
+        proof_file: ""
       }
     };
   },
@@ -97,7 +97,7 @@ export default {
       return this.$refs.form.validate().then(res => {
         if (
           this.fourth_step.ownership_file === "" ||
-          this.fourth_step.household_file === ""
+          this.fourth_step.proof_file === ""
         ) {
           document.querySelector(".errorFourth").style.display = "block";
           this.field_name.error = lang.de.fourth_step.error;
@@ -119,8 +119,8 @@ export default {
       ) {
         if (e.target.id === "ownership_file") {
           this.fourth_step.ownership_file = file[0];
-        } else if (e.target.id === "household_file") {
-          this.fourth_step.household_file = file[0];
+        } else if (e.target.id === "proof_file") {
+          this.fourth_step.proof_file = file[0];
         }
       } else {
         document.getElementById(e.target.id).value = "";

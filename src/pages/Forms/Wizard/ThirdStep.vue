@@ -57,10 +57,10 @@
               <md-card>
                 <md-card-content>
                   <md-datepicker
-                    v-model="third_step.contract_start"
+                    v-model="third_step.ownership_start"
                     md-immediately
                   >
-                    <label>{{ this.field_name.contract_start }}</label>
+                    <label>{{ this.field_name.ownership_start }}</label>
                   </md-datepicker>
                 </md-card-content>
               </md-card>
@@ -69,10 +69,10 @@
               <md-card>
                 <md-card-content>
                   <md-datepicker
-                    v-model="third_step.contract_end"
+                    v-model="third_step.ownership_end"
                     md-immediately
                   >
-                    <label>{{ this.field_name.contract_end }}</label>
+                    <label>{{ this.field_name.ownership_end }}</label>
                   </md-datepicker>
                 </md-card-content>
               </md-card>
@@ -106,8 +106,8 @@ export default {
         ownership_last_name: lang.de.third_step.ownership_last_name,
         ownership_company: lang.de.third_step.ownership_company,
         ownership_vehicle_number: lang.de.third_step.ownership_vehicle_number,
-        contract_start: lang.de.third_step.contract_start,
-        contract_end: lang.de.third_step.contract_end
+        ownership_start: lang.de.third_step.ownership_end,
+        ownership_end: lang.de.third_step.ownership_end
       },
       third_step: {
         step: "third_step",
@@ -115,8 +115,8 @@ export default {
         ownership_last_name: "",
         ownership_company: "",
         ownership_vehicle_number: "",
-        contract_start: "",
-        contract_end: ""
+        ownership_start: "",
+        ownership_end: ""
       }
     };
   },
@@ -145,8 +145,8 @@ export default {
         if (
           !checkTabDepency ||
           this.third_step.ownership_vehicle_number === "" ||
-          this.third_step.contract_start === "" ||
-          this.third_step.contract_end === ""
+          this.third_step.ownership_start === "" ||
+          this.third_step.ownership_end === ""
         ) {
           document.querySelector(".errorThird").style.display = "block";
           this.field_name.error = lang.de.third_step.error;

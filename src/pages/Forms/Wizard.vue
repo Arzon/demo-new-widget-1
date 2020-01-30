@@ -54,6 +54,7 @@ import Api from "@/services/api";
 import Swal from "sweetalert2";
 import { SimpleWizard, WizardTab } from "@/components";
 import { logo, baseUrl, company } from "@/config";
+import { apiConfig } from "@/appConfig";
 
 export default {
   name: "registration-wizard",
@@ -99,11 +100,6 @@ export default {
         ...this.data.third_step,
         ...this.data.fourth_step
       };
-      // const formData = new FormData();
-
-      // finalData.forEach(item => {
-      //   console.log(item);
-      // });
       let formData = new FormData();
       delete finalData.step;
 
@@ -118,9 +114,8 @@ export default {
         }
       });
 
-      Api.insertDocuments(url, basicToken, formData)
+      Api.insertDocuments(apiConfig.url+"/reg/insert-document", apiConfig.basicToken, formData)
         .then(res => {
-          console.log(res);
           this.$router.push("thankyou");
         })
         .catch(() => {
