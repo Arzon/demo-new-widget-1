@@ -18,6 +18,18 @@ import "./assets/css/demo.css";
 // library auto imports
 import "es6-promise/auto";
 
+import { baseUrl } from "@/config";
+
+if (baseUrl === "localhost") {
+  import("./assets/scss/innogy.scss");
+} else if (baseUrl === "innogy") {
+  import("./assets/scss/innogy.scss");
+} else if (baseUrl === "marke") {
+  import("./assets/scss/marke.scss");
+} else if (baseUrl === "enviam") {
+  import("./assets/scss/innogy.scss");
+}
+
 export default {
   install(Vue) {
     Vue.use(GlobalComponents);
