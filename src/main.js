@@ -23,15 +23,16 @@ import Chartist from "chartist";
 import routes from "./routes/routes";
 import { baseUrl } from "@/config";
 
-console.log("show baseurl " + baseUrl);
+// console.log("show baseurl " + baseUrl);
+const datetime = new Date();
 if (baseUrl === "localhost") {
-  require("@/assets/scss/innogy.scss");
+  require("@/assets/scss/innogy.scss?" + datetime);
 } else if (baseUrl === "innogy") {
-  require("@/assets/scss/innogy.scss");
+  require("@/assets/scss/innogy.scss?" + datetime);
 } else if (baseUrl === "marke") {
-  require("@/assets/scss/marke.scss");
+  require("@/assets/scss/marke.scss?" + datetime);
 } else if (baseUrl === "enviam") {
-  require("@/assets/scss/enviam.scss");
+  require("@/assets/scss/enviam.scss?" + datetime);
 }
 // plugin setup
 Vue.use(VueRouter);
