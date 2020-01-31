@@ -8,6 +8,6 @@
 `npm run build`
 
 ### create .gitignore file and the following line
-- dist/
-- node_modules/
-- appConfig.js
+dist/
+node_modules/
+appConfig.js

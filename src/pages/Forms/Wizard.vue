@@ -103,10 +103,7 @@ export default {
       let formData = new FormData();
       delete finalData.step;
 
-      console.log(finalData);
-
       Object.keys(finalData).forEach(key => {
-        console.log(key + ":" + finalData[key]);
         if (key === "ownership_file" || key === "household_file") {
           formData.append(key, finalData[key]);
         } else {
@@ -118,9 +115,7 @@ export default {
         .then(res => {
           this.$router.push("thankyou");
         })
-        .catch(() => {
-          console.log("something went worng");
-        });
+        .catch(() => {});
     }
   }
 };
