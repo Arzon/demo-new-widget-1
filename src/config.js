@@ -25,5 +25,5 @@ export const redirectUrl = {
 };
 
 export const baseUrl = window.location.host
-  .substr(0, window.location.host.indexOf(":"))
+  .substr(0, window.location.host.indexOf("."))
   .replace("-", "");
