@@ -27,7 +27,7 @@ if (baseUrl === "localhost") {
 } else if (baseUrl === "marke") {
   import("./assets/scss/marke.scss");
 } else if (baseUrl === "enviam") {
-  import("./assets/scss/innogy.scss");
+  import("./assets/scss/enviam.scss");
 }
 
 export default {
