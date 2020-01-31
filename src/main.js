@@ -23,6 +23,7 @@ import Chartist from "chartist";
 import routes from "./routes/routes";
 import { baseUrl } from "@/config";
 
+console.log("show baseurl " + baseUrl);
 if (baseUrl === "localhost") {
   require("@/assets/scss/innogy.scss");
 } else if (baseUrl === "innogy") {
