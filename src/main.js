@@ -24,15 +24,14 @@ import routes from "./routes/routes";
 import { baseUrl } from "@/config";
 
 // console.log("show baseurl " + baseUrl);
-const datetime = new Date();
 if (baseUrl === "localhost") {
-  require("@/assets/scss/innogy.scss?" + datetime);
+  require("@/assets/scss/innogy.scss");
 } else if (baseUrl === "innogy") {
-  require("@/assets/scss/innogy.scss?" + datetime);
+  require("@/assets/scss/innogy.scss");
 } else if (baseUrl === "marke") {
-  require("@/assets/scss/marke.scss?" + datetime);
+  require("@/assets/scss/marke.scss");
 } else if (baseUrl === "enviam") {
-  require("@/assets/scss/enviam.scss?" + datetime);
+  require("@/assets/scss/enviam.scss");
 }
 // plugin setup
 Vue.use(VueRouter);
