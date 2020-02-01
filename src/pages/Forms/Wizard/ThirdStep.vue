@@ -44,7 +44,7 @@
             </template>
           </tabs>
           <div class="md-layout">
-            <div class="md-layout-item md-size-60 md-small-size-100">
+            <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.ownership_vehicle_number }}</label>
                 <md-input
@@ -61,18 +61,6 @@
                     md-immediately
                   >
                     <label>{{ this.field_name.ownership_start }}</label>
-                  </md-datepicker>
-                </md-card-content>
-              </md-card>
-            </div>
-            <div class="md-layout-item md-size-50 md-small-size-100">
-              <md-card>
-                <md-card-content>
-                  <md-datepicker
-                    v-model="third_step.ownership_end"
-                    md-immediately
-                  >
-                    <label>{{ this.field_name.ownership_end }}</label>
                   </md-datepicker>
                 </md-card-content>
               </md-card>
@@ -106,8 +94,7 @@ export default {
         ownership_last_name: lang.de.third_step.ownership_last_name,
         ownership_company: lang.de.third_step.ownership_company,
         ownership_vehicle_number: lang.de.third_step.ownership_vehicle_number,
-        ownership_start: lang.de.third_step.ownership_end,
-        ownership_end: lang.de.third_step.ownership_end
+        ownership_start: lang.de.third_step.ownership_end
       },
       third_step: {
         step: "third_step",
@@ -145,8 +132,7 @@ export default {
         if (
           !checkTabDepency ||
           this.third_step.ownership_vehicle_number === "" ||
-          this.third_step.ownership_start === "" ||
-          this.third_step.ownership_end === ""
+          this.third_step.ownership_start === ""
         ) {
           document.querySelector(".errorThird").style.display = "block";
           this.field_name.error = lang.de.third_step.error;

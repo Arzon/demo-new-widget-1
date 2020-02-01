@@ -93,7 +93,7 @@ export default {
       }
     },
     registrationComplete() {
-      this.data.fourth_step.company = company[baseUrl];
+      this.data.fourth_step.greentrax_company = company[baseUrl];
       const finalData = {
         ...this.data.first_step,
         ...this.data.second_step,

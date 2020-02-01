@@ -7,8 +7,10 @@
                 "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
                 "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
                 "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
-                "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
-                "term_conditions_greentrax": "Test"
+                "term_conditions": "Ich stimme den AGB und <a href=\"javascript:void(0)\" id=\"term\" >Datenschutzrichtlinien</a> zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
+                "term_conditions_greentrax": "Test",
+                "term_modal_title": "modal title",
+                "term_modal_body": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und damit zu einem nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV) wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren"
             },
             "marke": {
                 "error": "Bitte fülle alle erforderlichen Felder aus!",
@@ -16,8 +18,10 @@
                 "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
                 "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
                 "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
-                "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
-                "term_conditions_greentrax": "Test"
+                "term_conditions": "Ich stimme den AGB und <a href=\"javascript:void(0)\" id=\"term\" >Datenschutzrichtlinien</a> zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
+                "term_conditions_greentrax": "Test",
+                "term_modal_title": "modal title",
+                "term_modal_body": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und damit zu einem nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV) wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren"
             },
             "enviam": {
                 "error": "Bitte fülle alle erforderlichen Felder aus!",
@@ -25,8 +29,10 @@
                 "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
                 "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
                 "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
-                "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
-                "term_conditions_greentrax": "Test"
+                "term_conditions": "Ich stimme den AGB und <a href=\"javascript:void(0)\" id=\"term\" >Datenschutzrichtlinien</a> zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
+                "term_conditions_greentrax": "Test",
+                "term_modal_title": "modal title",
+                "term_modal_body": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und damit zu einem nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV) wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren"
             },
             "demo": {
                 "error": "Bitte fülle alle erforderlichen Felder aus!",
@@ -34,8 +40,10 @@
                 "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
                 "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
                 "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
-                "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
-                "term_conditions_greentrax": "Test"
+                "term_conditions": "Ich stimme den AGB und <a href=\"javascript:void(0)\" id=\"term\" >Datenschutzrichtlinien</a> zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
+                "term_conditions_greentrax": "Test",
+                "term_modal_title": "modal title",
+                "term_modal_body": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und damit zu einem nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV) wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren"
             },
             "localhost": {
                 "error": "Bitte fülle alle erforderlichen Felder aus!",
@@ -43,8 +51,10 @@
                 "title": "Voraussetzungen für eine erfolgreiche Anrechnung",
                 "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
                 "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
-                "term_conditions": "Ich stimme den AGB und Datenschutzrichtlinien zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
-                "term_conditions_greentrax": "Test"
+                "term_conditions": "Ich stimme den AGB und <a href=\"javascript:void(0)\" id=\"term\" >Datenschutzrichtlinien</a> zu. Ich stimme zu, dass meine Daten im Auftrag von [Company] durch GreenTrax gespeichert werden und zum Zweck der THG-Minderungsquote nach der 38. BImSchV mit [COMPANY] geteilt werden.",
+                "term_conditions_greentrax": "Test",
+                "term_modal_title": "modal title",
+                "term_modal_body": "Herzlich Willkommen! Du kannst hier dein Elektroauto registrieren und damit zu einem nachhaltigeren Verkehrssektor in Deutschland beitragen. Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV) wird die Elektromobilität durch Mineralölkonzerne quersubventioniert. Du kannst hier einen kleinen Beitrag dazu leisten und gleichzeitig selbst profitieren"
             }
         },
         "second_step": {
