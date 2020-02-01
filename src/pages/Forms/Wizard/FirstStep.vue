@@ -7,24 +7,32 @@
           <p>{{ this.field_name.heading }}</p>
           <h4>{{ this.field_name.title }}</h4>
           <div class="firstStep-checkbox">
-            <md-checkbox v-model="first_step.confirm_ownership">{{
-              this.field_name.confirm_ownership
-            }}</md-checkbox>
-            <md-checkbox v-model="first_step.confirm_energy_contract">
-              {{ this.field_name.confirm_energy_contract }}
-            </md-checkbox>
+            <div class="md-layout-item md-small-size-100">
+              <md-checkbox v-model="first_step.confirm_ownership"></md-checkbox>
+              <span class="checkboxSpan">{{ this.field_name.confirm_ownership }}</span>
+            </div>
+            <div class="md-layout-item md-small-size-100">
+              <md-checkbox v-model="first_step.confirm_energy_contract">
+              </md-checkbox><span class="checkboxSpan">{{ this.field_name.confirm_energy_contract }}</span>
+             </div>
           </div>
           <div class="firstStep-checkbox">
-            <md-checkbox v-model="first_step.term_conditions">{{
-              this.field_name.term_conditions
-            }}</md-checkbox>
-            <md-checkbox v-model="first_step.term_conditions_greentrax">{{
-              this.field_name.term_conditions_greentrax
-            }}</md-checkbox>
+            <div class="md-layout-item md-small-size-100">
+              <md-checkbox v-model="first_step.term_conditions"></md-checkbox>
+              <span class="checkboxSpan">{{
+                this.field_name.term_conditions
+              }}</span>
+            </div>
+            <div class="md-layout-item md-small-size-100">
+              <md-checkbox v-model="first_step.term_conditions_greentrax"></md-checkbox>
+              <span class="checkboxSpan">{{
+                this.field_name.term_conditions_greentrax
+              }}</span>
+            </div>
           </div>
           <div class="error" style="display:none">
             <div class="alert alert-danger">
-              <span>{{ this.field_name.error }}</span>
+              <span class="checkboxSpan">{{ this.field_name.error }}</span>
             </div>
           </div>
         </div>
@@ -36,6 +44,7 @@
 import { extend } from "vee-validate";
 import { required, email } from "vee-validate/dist/rules";
 import lang from "@/assets/lang/de.json";
+import { baseUrl } from "@/config";
 
 export default {
   components: {},
@@ -49,12 +58,12 @@ export default {
     return {
       field_name: {
         error: "",
-        heading: lang.de.first_step.heading,
-        title: lang.de.first_step.title,
-        confirm_ownership: lang.de.first_step.confirm_ownership,
-        confirm_energy_contract: lang.de.first_step.confirm_energy_contract,
-        term_conditions: lang.de.first_step.term_conditions,
-        term_conditions_greentrax: lang.de.first_step.term_conditions_greentrax
+        heading: lang.de.first_step[baseUrl].heading,
+        title: lang.de.first_step[baseUrl].title,
+        confirm_ownership: lang.de.first_step[baseUrl].confirm_ownership,
+        confirm_energy_contract: lang.de.first_step[baseUrl].confirm_energy_contract,
+        term_conditions: lang.de.first_step[baseUrl].term_conditions,
+        term_conditions_greentrax: lang.de.first_step[baseUrl].term_conditions_greentrax
       },
       first_step: {
         step: "first_step",

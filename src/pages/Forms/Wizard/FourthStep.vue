@@ -6,7 +6,7 @@
           <h4>{{ this.field_name.title }}</h4>
           <p>{{ this.field_name.heading }}</p>
           <div class="md-layout">
-            <label class="md-layout-item md-size-50 md-form-label">
+            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label">
               {{ this.field_name.ownership_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
@@ -32,7 +32,7 @@
           </md-card-content>
 
           <div class="md-layout">
-            <label class="md-layout-item md-size-50 md-form-label">
+            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label">
               {{ this.field_name.proof_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">

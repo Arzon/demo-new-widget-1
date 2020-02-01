@@ -24,6 +24,11 @@ export const redirectUrl = {
   demo: "https://www.innogy-emobility.com/elektromobilitaet"
 };
 
-export const baseUrl = window.location.host
-  .substr(0, window.location.host.indexOf("."))
-  .replace("-", "");
+export const baseUrl =
+  window.location.host === "localhost:8080"
+    ? window.location.host
+        .substr(0, window.location.host.indexOf(":"))
+        .replace("-", "")
+    : window.location.host
+        .substr(0, window.location.host.indexOf("."))
+        .replace("-", "");
