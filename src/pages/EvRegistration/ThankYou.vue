@@ -36,8 +36,8 @@ export default {
   data() {
     return {
       field_name: {
-        heading: lang.de.fifth_step.heading,
-        title: lang.de.fifth_step.title
+        heading: lang.de.fifth_step[baseUrl].heading,
+        title: lang.de.fifth_step[baseUrl].title
       }
     };
   },
