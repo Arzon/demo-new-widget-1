@@ -94,7 +94,7 @@ export default {
         ownership_last_name: lang.de.third_step.ownership_last_name,
         ownership_company: lang.de.third_step.ownership_company,
         ownership_vehicle_number: lang.de.third_step.ownership_vehicle_number,
-        ownership_start: lang.de.third_step.ownership_end
+        ownership_start: lang.de.third_step.ownership_start
       },
       third_step: {
         step: "third_step",

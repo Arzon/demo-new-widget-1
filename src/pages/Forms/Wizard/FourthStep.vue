@@ -6,45 +6,46 @@
           <h4 style="text-align:center;">{{ this.field_name.title }}</h4>
           <p style="text-align:center;">{{ this.field_name.heading }}</p>
           <div class="md-layout">
-            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label">
+            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label" style="text-align:center;">
               {{ this.field_name.ownership_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
-              <input
+              <input style="text-align:center;"
                 type="file"
                 id="ownership_file"
-                accept="application/pdf, image/jpeg, image/png"
+                accept="image/jpeg,image/png,application/pdf"
                 @change="updateMelliCodeFrontScan"
                 required
               />
             </div>
           </div>
+          <div class="md-layout">
+            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label" style="text-align:center;">
+              {{ this.field_name.proof_file }}
+            </label>
+            <div class="md-layout-item md-xsmall-size-100 adjust">
+              <input style="text-align:center;"
+                type="file"
+                id="proof_file"
+                accept="image/jpeg,image/png,application/pdf"
+                @change="updateMelliCodeFrontScan"
+              />
+            </div>
+          </div>
+          
           <md-card-content>
             <md-table v-model="tableData" table-header-color="green">
               <md-table-row slot="md-table-row" slot-scope="{ item }">
-                <md-table-cell md-label="Sonderfall/Konstellation">{{
+                <md-table-cell md-label="Situation">{{
                   item.key
                 }}</md-table-cell>
-                <md-table-cell md-label="Zusätzlicher Nachweis">{{
+                <md-table-cell md-label="Nachweise">{{
                   item.value
                 }}</md-table-cell>
               </md-table-row>
             </md-table>
           </md-card-content>
 
-          <div class="md-layout">
-            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label">
-              {{ this.field_name.proof_file }}
-            </label>
-            <div class="md-layout-item md-xsmall-size-100 adjust">
-              <input
-                type="file"
-                id="proof_file"
-                accept="application/pdf, image/jpeg, image/png"
-                @change="updateMelliCodeFrontScan"
-              />
-            </div>
-          </div>
           <div class="errorFourth" style="display:none">
             <div class="alert alert-danger">
               <span>{{ this.field_name.error }}</span>
@@ -66,18 +67,18 @@ export default {
     return {
       tableData: [
         {
-          key: "Name (Privatperson oder Unternehmen) stimmen überein.",
-          value: "-"
+          key: "Name (Privatperson oder Unternehmen) von Stromvertrag und Zulassung stimmen überein.",
+          value: "nur Fahrzeugschein"
         },
         {
           key:
-            "Halter des Elektroautos ist andere Person aber wohnt im selben Haushalt.",
-          value: "Personalausweis"
+            "Halter des Elektroautos hat anderen Namen aber die selbe Adresse.",
+          value: "Fahrzeugschein + Personalausweis (Rückseite)"
         },
         {
           key:
             "Das Elektroauto ist ein Dienstwagen und auf ein Unternehmen zugelassen.",
-          value: "Bescheinigung Dienstwagen"
+          value: "Fahrzeugschein + Bescheinigung Dienstwagen"
         }
       ],
       field_name: {

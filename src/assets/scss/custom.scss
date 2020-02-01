@@ -15,6 +15,9 @@
     .md-card {
         margin: 0;
     }
+    .md-layout-item {
+        margin-bottom: 10px;
+    }
     .firstStep-checkbox {
         .md-checkbox {
             margin: 0px ;
@@ -24,6 +27,8 @@
     .second-step{
         .md-card .md-card-content{
             padding: 0;
+            width: 100%;
+            text-align: center;
         }
         .md-card {
             box-shadow: none;
@@ -52,8 +57,12 @@
     //     height: 145px;
     // }
     .nav-tabs {
-        width: 30%;
-        margin: auto;
+        display: inline-block;
+    }
+
+    .md-list-item {
+        float: left;
+        margin-left: 0;
     }
 
     .md-card-tabs .md-card-header {
@@ -66,30 +75,7 @@
             padding: 0;
         }
     }
-    @media only screen 
-    and (max-width : 412px){
-        .md-card-content {
-            font-size: 12px;
-        }
-        .md-checkbox .md-checkbox-label{
-            height: 40px;
-        }
-        .nav-pills{
-            display: none;
-        }
-        // .md-layout{
-        //     margin-top: 20px;
-        // }
-        // .moving-tab{
-        //     margin-left: 8px;
-        // }
-        .md-card-content{
-            margin-top: 30px;
-        }
-        .md-field:after, .md-field:before{
-            bottom: 20px;
-        }
-    }
+    
     @media only screen 
     and (max-width : 812px){
         .md-checkbox .md-checkbox-label{
@@ -110,12 +96,35 @@
         .md-field {
             margin: 0;
         }
-        .nav-tabs {
-            margin: 0;
-            width: 100%;
-        }
         .md-form-label {
-            text-align: center;
+            text-align: center !important;
+        }
+    }
+    @media only screen 
+    and (max-width : 480px){
+        .md-card-content {
+            font-size: 12px;
+        }
+        .md-checkbox .md-checkbox-label{
+            height: 40px;
+        }
+        .nav-pills{
+            display: none;
+        }
+        // .md-layout{
+        //     margin-top: 20px;
+        // }
+        // .moving-tab{
+        //     margin-left: 8px;
+        // }
+        .md-card-content{
+            margin-top: 25px;
+        }
+        div.moving-tab{
+            transform: translate3d(0px, 0px, 0px) !important;
+        }
+        .md-field:after, .md-field:before{
+            bottom: 20px;
         }
     }
     .md-card .md-card-header{

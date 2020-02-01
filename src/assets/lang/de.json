@@ -47,8 +47,8 @@
             },
             "localhost": {
                 "error": "Bitte fülle alle erforderlichen Felder aus!",
-                "heading": "Im Rahmen der Treibhaugas-Minderungsquote (38. BImschV nach der EU Renewable Energy Directive II) wird Elektromobilität durch Mineralölunternehmen quersubventioniert. Du kannst hier dein Elektroauto registrieren um einen kleinen Beitrag zu einem nachhaltigeren Verkehrssektor in Deutschland zu leisten und gleichzeitig selbst zu profitieren.",
-                "title": "Voraussetzungen für eine erfolgreiche Anrechnung:",
+                "heading": "Im Rahmen der Treibhaugas-Minderungsquote (§37 BImschG) wird Elektromobilität durch Mineralölunternehmen quersubventioniert. Du kannst dein Elektroauto registrieren um einen kleinen Beitrag zu einem nachhaltigeren Verkehrssektor in Deutschland zu leisten und gleichzeitig selbst zu profitieren.",
+                "title": "Voraussetzungen für eine Anrechnung deiner Emissionseinsparungen:",
                 "confirm_ownership": "Ein reines Batterie-Elektrofahrzeug ist auf mich (oder mein Unternehmen) zugelassen.",
                 "confirm_energy_contract": "Ein gültiger Stromvertrag von [COMPANY] läuft auf mich (oder mein Unternehmen).",
                 "term_conditions": "Ich akzeptiere die <a href=\"javascript:void(0)\" id=\"term\" >Datenschutzrichtlinien</a> der GT Emission Solutions UG (haftungsbeschränkt) und bin damit einverstanden, dass meine Personen- und KfZ-bezogenen Daten entsprechend der vorgenannten Bedingungen verarbeitet und an die [Company] weitergegeben werden. Des Weiteren bin ich damit einverstanden, dass meine Daten zur automatisierten Entscheidungsfindung herangezogen werden.",
@@ -80,15 +80,15 @@
             "ownership_first_name": "Vorname (laut KFZ-Zulassungsbescheinigung)*",
             "ownership_last_name": "Nachname (laut KFZ-Zulassungsbescheinigung)*",
             "ownership_vehicle_number": "KFZ-Kennzeichen*",
-            "ownership_start": "Datum Zulassung",
+            "ownership_start": "Zulassungsdatum",
             "ownership_end": "Datum Abmeldung"
         },
         "fourth_step":{
             "error": "Bitte lade mindestens eine Datei hoch (mindestens ein Foto/Kopie der Zulassungsbescheinigung Teil I)!",
             "title": "Nachweise hochladen",
-            "heading": "Als Nachweis für die Zulassung eines reinen Batterie-Elektrofahrzeuges benötigen wir ein Foto/Kopie deiner Zulassungsbescheinigung Teil I (Fahrzeugschein). Je nach Konstellation bezüglich Stromvertrag und Zulassung benötigen wir darüber hinaus noch weitere Nachweise. Die Tabelle gibt einen Überblick. Hinweis: Bitte stelle sicher, dass die Schrift lesbar ist, ansonsten können wir den Bonus leider nicht auszahlen.",
-            "ownership_file": "KFZ Zulassungsbescheinigung Teil I",
-            "proof_file": "Sonstige Nachweise (als Foto oder Kopie)"
+            "heading": "Als Nachweis für die Zulassung eines reinen Batterie-Elektrofahrzeuges benötigen wir ein Foto/Kopie deiner Zulassungsbescheinigung Teil I (Fahrzeugschein). Je nach Konstellation aus Stromvertrag und Zulassung benötigen wir darüber hinaus noch weitere Nachweise. Die Tabelle gibt einen Überblick. Hinweis: Bitte stelle sicher, dass die Schrift lesbar ist, ansonsten können wir den Bonus leider nicht auszahlen.",
+            "ownership_file": "KFZ Zulassungsbescheinigung Teil I (Fahrzeugschein)*:",
+            "proof_file": "Sonstige Nachweise (Foto oder Kopie):"
         },
         "fifth_step": {
             "innogy": {
