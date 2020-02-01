@@ -42,7 +42,7 @@
               </div>
             </template>
           </tabs>
-          <div class="md-layout" style="margin-top:20px;">
+          <div class="md-layout">
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.email }}</label>

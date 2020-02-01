@@ -7,8 +7,7 @@
         margin: auto;
     }
     p, div, .md-checkbox-label {
-        color: #000000;
-        font-weight: 100;
+        font-weight: 200;
     }
     .md-card-wizard .tab-content{
         padding: 20px 0px;
@@ -52,33 +51,52 @@
     // .md-card .md-card-tabs .md-theme-default{
     //     height: 145px;
     // }
+    .nav-tabs {
+        width: 30%;
+        margin: auto;
+    }
+
+    .md-card-tabs .md-card-header {
+        display: none;
+    }
 
     @media only screen 
     and (max-width : 320px){
         .md-card-tabs .md-list {
             padding: 0;
-            margin-left: -34px;
         }
     }
     @media only screen 
     and (max-width : 412px){
+        .md-card-content {
+            font-size: 12px;
+        }
         .md-checkbox .md-checkbox-label{
             height: 40px;
         }
         .nav-pills{
             display: none;
         }
+        // .md-layout{
+        //     margin-top: 20px;
+        // }
         // .moving-tab{
         //     margin-left: 8px;
         // }
         .md-card-content{
             margin-top: 30px;
         }
+        .md-field:after, .md-field:before{
+            bottom: 20px;
+        }
     }
     @media only screen 
     and (max-width : 812px){
         .md-checkbox .md-checkbox-label{
             height: 80px;
+        }
+        .md-layout-item.md-small-size-100{
+            z-index: 999999;
         }
         .second-step{
             .md-card {
@@ -91,6 +109,13 @@
         }
         .md-field {
             margin: 0;
+        }
+        .nav-tabs {
+            margin: 0;
+            width: 100%;
+        }
+        .md-form-label {
+            text-align: center;
         }
     }
     .md-card .md-card-header{
