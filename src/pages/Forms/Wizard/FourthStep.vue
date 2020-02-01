@@ -13,6 +13,7 @@
               <input
                 type="file"
                 id="ownership_file"
+                accept="application/pdf, image/jpeg, image/png"
                 @change="updateMelliCodeFrontScan"
                 required
               />
@@ -39,6 +40,7 @@
               <input
                 type="file"
                 id="proof_file"
+                accept="application/pdf, image/jpeg, image/png"
                 @change="updateMelliCodeFrontScan"
               />
             </div>
