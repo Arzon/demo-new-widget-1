@@ -4,8 +4,8 @@
       <div>
         <img class="img evLogo" :src="banner" />
         <div class="md-layout-item md-size-100 md-small-size-100">
-          <p>{{ this.field_name.heading }}</p>
-          <h4>{{ this.field_name.title }}</h4>
+          <p style="text-align:center;">{{ this.field_name.heading }}</p>
+          <h4 style="text-align:center;">{{ this.field_name.title }}</h4>
           <div class="firstStep-checkbox">
             <div class="md-layout-item md-small-size-100">
               <md-checkbox v-model="first_step.confirm_ownership"></md-checkbox>
@@ -13,18 +13,18 @@
             </div>
             <div class="md-layout-item md-small-size-100">
               <md-checkbox v-model="first_step.confirm_energy_contract">
-              </md-checkbox><span class="checkboxSpan"  v-html="field_name.confirm_energy_contract"></span>
+              </md-checkbox><span class="checkboxSpan" v-html="field_name.confirm_energy_contract"></span>
              </div>
-          </div>
-          <div class="firstStep-checkbox">
+          <!--</div> -->
+          <!--<div class="firstStep-checkbox"> -->
             <div class="md-layout-item md-small-size-100">
               <md-checkbox v-model="first_step.term_conditions"></md-checkbox>
               <span class="checkboxSpan" v-html="field_name.term_conditions"></span>
             </div>
-            <div class="md-layout-item md-small-size-100">
+            <!--<div class="md-layout-item md-small-size-100">
               <md-checkbox v-model="first_step.term_conditions_greentrax"></md-checkbox>
               <span class="checkboxSpan" v-html="field_name.term_conditions_greentrax"></span>
-            </div>
+            </div>-->
           </div>
           <div class="error" style="display:none">
             <div class="alert alert-danger">
@@ -74,7 +74,7 @@ export default {
   props: {
     banner: {
       type: String,
-      default: require("@/assets/img/banner2.png")
+      default: require("@/assets/img/banner2_big.png")
     }
   },
   data() {
@@ -94,8 +94,8 @@ export default {
         step: "first_step",
         confirm_ownership: false,
         confirm_energy_contract: false,
-        term_conditions: false,
-        term_conditions_greentrax: false
+        term_conditions: false, 
+        //term_conditions_greentrax: false
       }
     };
   },
@@ -110,11 +110,11 @@ export default {
         if (
           this.first_step.confirm_ownership === false ||
           this.first_step.confirm_energy_contract === false ||
-          this.first_step.term_conditions === false ||
-          this.first_step.term_conditions_greentrax === false
+          this.first_step.term_conditions === false
+          //this.first_step.term_conditions_greentrax === false
         ) {
           document.querySelector(".error").style.display = "block";
-          this.field_name.error = lang.de.first_step.error;
+          this.field_name.error = lang.de.first_step[baseUrl].error;
         } else {
           document.querySelector(".error").style.display = "none";
           this.field_name.error = "";

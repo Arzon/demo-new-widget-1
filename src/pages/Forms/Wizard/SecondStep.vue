@@ -3,8 +3,8 @@
     <form @submit.prevent="validate">
       <div>
         <div class="md-layout-item md-size-100 md-small-size-100 second-step">
-          <h4>{{ this.field_name.title }}</h4>
-          <p>{{ this.field_name.heading }}</p>
+          <h4 style="text-align:center;">{{ this.field_name.title }}</h4>
+          <p style="text-align:center;">{{ this.field_name.heading }}</p>
           <tabs :tab-name="['Privatperson', 'Gewerbe']" color-button="warning">
             <template slot="tab-pane-1">
               <div class="md-layout">
@@ -42,7 +42,7 @@
               </div>
             </template>
           </tabs>
-          <div class="md-layout">
+          <div class="md-layout" style="margin-top:20px;">
             <div class="md-layout-item md-size-50 md-small-size-100">
               <md-field>
                 <label>{{ this.field_name.email }}</label>

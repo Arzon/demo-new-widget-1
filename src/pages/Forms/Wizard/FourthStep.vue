@@ -3,8 +3,8 @@
     <form @submit.prevent="validate">
       <div>
         <div class="md-layout-item md-size-100 md-small-size-100 second-step">
-          <h4>{{ this.field_name.title }}</h4>
-          <p>{{ this.field_name.heading }}</p>
+          <h4 style="text-align:center;">{{ this.field_name.title }}</h4>
+          <p style="text-align:center;">{{ this.field_name.heading }}</p>
           <div class="md-layout">
             <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label">
               {{ this.field_name.ownership_file }}
