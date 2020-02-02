@@ -3,7 +3,7 @@
     <form @submit.prevent="validate">
       <div>
         <div class="md-layout-item md-size-100 md-small-size-100 second-step">
-          <h4 style="text-align:center;">{{ this.field_name.title }}</h4>
+          <h4 style="text-align:center">{{ this.field_name.title }}</h4>
           <p style="text-align:center;">{{ this.field_name.heading }}</p>
           <tabs :tab-name="['Privatperson', 'Gewerbe']" color-button="warning">
             <template slot="tab-pane-1">

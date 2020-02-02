@@ -2,7 +2,7 @@
   <ValidationObserver ref="form">
     <form @submit.prevent="validate">
       <div>
-        <img class="img evLogo" :src="banner" />
+        <!--<img style ="margin-top:20px;" class="img evLogo" :src="banner" /> -->
         <div class="md-layout-item md-size-100 md-small-size-100">
           <p style="text-align:center; font-weight: 400;">{{ this.field_name.heading }}</p>
           <h4 style="text-align:center;">{{ this.field_name.title }}</h4>

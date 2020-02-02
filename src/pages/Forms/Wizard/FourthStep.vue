@@ -99,8 +99,8 @@ export default {
     validate() {
       return this.$refs.form.validate().then(res => {
         if (
-          this.fourth_step.ownership_file === "" ||
-          this.fourth_step.proof_file === ""
+          this.fourth_step.ownership_file === "" 
+         // || this.fourth_step.proof_file === ""
         ) {
           document.querySelector(".errorFourth").style.display = "block";
           this.field_name.error = lang.de.fourth_step.error;
