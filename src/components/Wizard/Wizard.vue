@@ -116,7 +116,7 @@ export default {
     },
     finishButtonText: {
       type: String,
-      default: "Finish"
+      default: "Senden"
     },
     vertical: {
       type: Boolean

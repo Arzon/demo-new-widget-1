@@ -5,12 +5,12 @@
         <div class="md-layout-item md-size-100 md-small-size-100 second-step">
           <h4 style="text-align:center;">{{ this.field_name.title }}</h4>
           <p style="text-align:center;">{{ this.field_name.heading }}</p>
-          <div class="md-layout">
-            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label" style="text-align:center;">
+          <div class="md-layout" style="text-align:center;margin-top:20px;">
+            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label" style="text-align:center;padding:0;">
               {{ this.field_name.ownership_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
-              <input style="text-align:center;"
+              <input style="width:100%;"
                 type="file"
                 id="ownership_file"
                 accept="image/jpeg,image/png,application/pdf"
@@ -19,12 +19,12 @@
               />
             </div>
           </div>
-          <div class="md-layout">
-            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label" style="text-align:center;">
+          <div class="md-layout" style="text-align:center;">
+            <label class="md-layout-item md-size-50 md-xsmall-size-100 md-form-label" style="text-align:center;padding:0;">
               {{ this.field_name.proof_file }}
             </label>
             <div class="md-layout-item md-xsmall-size-100 adjust">
-              <input style="text-align:center;"
+              <input style="width:100%;"
                 type="file"
                 id="proof_file"
                 accept="image/jpeg,image/png,application/pdf"
