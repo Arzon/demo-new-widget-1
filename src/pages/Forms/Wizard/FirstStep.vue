@@ -19,7 +19,10 @@
           <!--<div class="firstStep-checkbox"> -->
             <div class="md-layout-item md-small-size-100">
               <md-checkbox v-model="first_step.term_conditions"></md-checkbox>
-              <span class="checkboxSpan" v-html="field_name.term_conditions"></span>
+              <span
+                class="checkboxSpan"
+                v-html="field_name.term_conditions"
+              ></span>
             </div>
             <!--<div class="md-layout-item md-small-size-100">
               <md-checkbox v-model="first_step.term_conditions_greentrax"></md-checkbox>
@@ -32,7 +35,7 @@
             </div>
           </div>
           <modal class="term-modal" style="display:none">
-                <template slot="header">
+            <template slot="header">
                   <h4 class="modal-title" v-html="field_name.term_modal_title"></h4>
                   <md-button
                     class="md-simple md-just-icon md-round modal-default-button"
